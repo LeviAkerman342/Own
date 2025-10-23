@@ -1,5 +1,6 @@
+import 'package:Own/features/auth/presentation/screens/login_screen.dart';
+import 'package:Own/features/onboarding/widgets/onboarding_page.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/features/onboarding/widgets/onboarding_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -10,80 +11,109 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final controller = PageController();
+  final PageController _controller = PageController(viewportFraction: 0.88);
+  double _currentPage = 0.0;
+
+  final List<Map<String, String>> pages = [
+    {
+      'image': 'assets/images/onb1.png',
+      'title': 'ВСЯ СЕМЬЯ В КУРСЕ',
+      'desc':
+          'Простой учёт общих расходов\nПриватные комнаты для группы\nНаглядная аналитика и бюджет\nФото чеков и быстрых вводов',
+      'btn': 'Начать контролировать',
+    },
+    {
+      'image': 'assets/images/onb2.png',
+      'title': 'ПРИВАТНЫЕ КОМНАТЫ ДЛЯ ВСЕХ',
+      'desc':
+          'Создайте группы для семьи и друзей\nОтдельный учёт для общих трат\nТолько по приглашению и с общим доступом',
+      'btn': 'Продолжить',
+    },
+    {
+      'image': 'assets/images/onb3.png',
+      'title': 'ЯСНАЯ АНАЛИТИКА И БЮДЖЕТ',
+      'desc':
+          'Узнайте, куда уходят деньги\nСтавьте цели и следите за прогрессом\nПолучайте умные отчёты',
+      'btn': 'Начать пользоваться',
+    },
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(() {
+      setState(() {
+        _currentPage = _controller.page ?? 0;
+      });
+    });
+  }
+
+  void _onNextPressed() {
+    if (_currentPage < pages.length - 1) {
+      _controller.nextPage(
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.easeOutCubic,
+      );
+    } else {
+       Navigator.pushReplacement(
+       context,
+       MaterialPageRoute(builder: (_) => const LoginScreen()),
+    );
+}
+}
 
   @override
   Widget build(BuildContext context) {
-    final pages = [
-      const OnboardingPage(
-        imageUrl:
-            'https://cdn-icons-png.flaticon.com/512/8189/8189783.png',
-        title: 'Welcome to Family Notes',
-        description:
-            'Keep your family organized and connected with shared notes and reminders.',
-      ),
-      const OnboardingPage(
-        imageUrl:
-            'https://cdn-icons-png.flaticon.com/512/3313/3313888.png',
-        title: 'Share Tasks Easily',
-        description:
-            'Assign chores, plan meals, or manage events together effortlessly.',
-      ),
-      const OnboardingPage(
-        imageUrl:
-            'https://cdn-icons-png.flaticon.com/512/4160/4160750.png',
-        title: 'Stay in Sync',
-        description:
-            'All updates appear instantly for everyone in the family group.',
-      ),
-    ];
-
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
-        child: Column(
+        child: Stack(
+          alignment: Alignment.bottomCenter,
           children: [
-            Expanded(
-              child: PageView(
-                controller: controller,
-                children: pages,
-              ),
-            ),
-            const SizedBox(height: 16),
-            SmoothPageIndicator(
-              controller: controller,
-              count: pages.length,
-              effect: const ExpandingDotsEffect(
-                dotHeight: 8,
-                dotWidth: 8,
-                activeDotColor: Colors.indigo,
-              ),
-            ),
-            const SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: ElevatedButton(
-                onPressed: () {
-                  if (controller.page == pages.length - 1) {
-                    // TODO: Navigate to home/login screen
-                  } else {
-                    controller.nextPage(
-                      duration: const Duration(milliseconds: 400),
-                      curve: Curves.easeInOut,
+            PageView.builder(
+              controller: _controller,
+              itemCount: pages.length,
+              itemBuilder: (context, index) {
+                final scale =
+                    (1 - ((_currentPage - index).abs() * 0.1)).clamp(0.9, 1.0);
+                final opacity =
+                    (1 - ((_currentPage - index).abs() * 0.4)).clamp(0.0, 1.0);
+
+                return AnimatedBuilder(
+                  animation: _controller,
+                  builder: (context, child) {
+                    return Transform.scale(
+                      scale: scale,
+                      child: Opacity(
+                        opacity: opacity,
+                        child: child,
+                      ),
                     );
-                  }
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.indigo,
-                  foregroundColor: Colors.white,
-                  minimumSize: const Size.fromHeight(48),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                  },
+                  child: OnboardingPage(
+                    imageAsset: pages[index]['image']!,
+                    title: pages[index]['title']!,
+                    description: pages[index]['desc']!,
+                    buttonText: pages[index]['btn']!,
+                    onPressed: _onNextPressed,
                   ),
+                );
+              },
+            ),
+            Positioned(
+              bottom: 30,
+              child: SmoothPageIndicator(
+                controller: _controller,
+                count: pages.length,
+                effect: const ExpandingDotsEffect(
+                  activeDotColor: Colors.white,
+                  dotColor: Colors.white38,
+                  dotHeight: 8,
+                  dotWidth: 8,
+                  expansionFactor: 3,
                 ),
-                child: const Text('Next'),
               ),
             ),
-            const SizedBox(height: 24),
           ],
         ),
       ),
