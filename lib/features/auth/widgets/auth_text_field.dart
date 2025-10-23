@@ -1,36 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:own/core/theme/model/color_collection.dart';
 
 class AuthTextField extends StatelessWidget {
-  final String hintText;
-  final bool obscureText;
-  final TextInputType keyboardType;
-  final IconData? icon;
-  final TextEditingController? controller;
+  final String hint;
+  final bool obscure;
+  final TextEditingController controller;
 
   const AuthTextField({
     super.key,
-    required this.hintText,
-    this.obscureText = false,
-    this.keyboardType = TextInputType.text,
-    this.icon,
-    this.controller,
+    required this.hint,
+    this.obscure = false,
+    required this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
-      obscureText: obscureText,
-      keyboardType: keyboardType,
+      obscureText: obscure,
       decoration: InputDecoration(
-        prefixIcon: icon != null ? Icon(icon) : null,
-        hintText: hintText,
+        hintText: hint,
         filled: true,
-        fillColor: Colors.white,
-        contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+        fillColor: ColorCollection.textDark,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
+        ),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 14,
         ),
       ),
     );

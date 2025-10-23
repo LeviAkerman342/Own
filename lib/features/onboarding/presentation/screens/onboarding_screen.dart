@@ -1,6 +1,7 @@
-import 'package:Own/features/auth/presentation/screens/login_screen.dart';
-import 'package:Own/features/onboarding/widgets/onboarding_page.dart';
+
 import 'package:flutter/material.dart';
+import 'package:own/features/auth/presentation/screens/login_screen.dart';
+import 'package:own/features/onboarding/widgets/onboarding_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {

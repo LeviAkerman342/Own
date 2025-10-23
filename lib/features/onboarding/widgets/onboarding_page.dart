@@ -67,6 +67,7 @@ class _OnboardingPageState extends State<OnboardingPage>
           fit: BoxFit.cover,
         ),
         Container(
+          // ignore: deprecated_member_use
           color: Colors.black.withOpacity(0.4),
         ),
         Padding(
