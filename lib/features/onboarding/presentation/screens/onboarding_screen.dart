@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
-import 'package:own/features/auth/presentation/screens/login_screen.dart';
-import 'package:own/features/onboarding/widgets/onboarding_page.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:go_router/go_router.dart';
+import 'package:own/core/theme/model/color_collection.dart';
+import 'package:own/core/router/domain/app_routes.dart';
+import 'package:own/features/onboarding/model/data.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -12,110 +12,148 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final PageController _controller = PageController(viewportFraction: 0.88);
-  double _currentPage = 0.0;
+  final PageController _pageController = PageController();
+  int _currentPage = 0;
 
-  final List<Map<String, String>> pages = [
-    {
-      'image': 'assets/images/onb1.png',
-      'title': 'ВСЯ СЕМЬЯ В КУРСЕ',
-      'desc':
-          'Простой учёт общих расходов\nПриватные комнаты для группы\nНаглядная аналитика и бюджет\nФото чеков и быстрых вводов',
-      'btn': 'Начать контролировать',
-    },
-    {
-      'image': 'assets/images/onb2.png',
-      'title': 'ПРИВАТНЫЕ КОМНАТЫ ДЛЯ ВСЕХ',
-      'desc':
-          'Создайте группы для семьи и друзей\nОтдельный учёт для общих трат\nТолько по приглашению и с общим доступом',
-      'btn': 'Продолжить',
-    },
-    {
-      'image': 'assets/images/onb3.png',
-      'title': 'ЯСНАЯ АНАЛИТИКА И БЮДЖЕТ',
-      'desc':
-          'Узнайте, куда уходят деньги\nСтавьте цели и следите за прогрессом\nПолучайте умные отчёты',
-      'btn': 'Начать пользоваться',
-    },
-  ];
-
-  @override
-  void initState() {
-    super.initState();
-    _controller.addListener(() {
-      setState(() {
-        _currentPage = _controller.page ?? 0;
-      });
-    });
-  }
-
-  void _onNextPressed() {
+  void _nextPage() {
     if (_currentPage < pages.length - 1) {
-      _controller.nextPage(
-        duration: const Duration(milliseconds: 600),
-        curve: Curves.easeOutCubic,
+      _pageController.nextPage(
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeInOut,
       );
     } else {
-       Navigator.pushReplacement(
-       context,
-       MaterialPageRoute(builder: (_) => const LoginScreen()),
-    );
-}
-}
+      context.go(AppRoutes.login);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: ColorCollection.background,
       body: SafeArea(
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            PageView.builder(
-              controller: _controller,
-              itemCount: pages.length,
-              itemBuilder: (context, index) {
-                final scale =
-                    (1 - ((_currentPage - index).abs() * 0.1)).clamp(0.9, 1.0);
-                final opacity =
-                    (1 - ((_currentPage - index).abs() * 0.4)).clamp(0.0, 1.0);
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          child: Column(
+            children: [
+              /// Основное содержимое
+              Expanded(
+                child: PageView.builder(
+                  controller: _pageController,
+                  itemCount: pages.length,
+                  onPageChanged: (index) {
+                    setState(() => _currentPage = index);
+                  },
+                  itemBuilder: (context, index) {
+                    final page = pages[index];
 
-                return AnimatedBuilder(
-                  animation: _controller,
-                  builder: (context, child) {
-                    return Transform.scale(
-                      scale: scale,
-                      child: Opacity(
-                        opacity: opacity,
-                        child: child,
+                    return AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 500),
+                      switchInCurve: Curves.easeInOut,
+                      switchOutCurve: Curves.easeInOut,
+                      transitionBuilder: (child, animation) {
+                        final fadeAnimation = CurvedAnimation(
+                          parent: animation,
+                          curve: Curves.easeInOut,
+                        );
+                        final slideAnimation = Tween<Offset>(
+                          begin: const Offset(0, 0.1),
+                          end: Offset.zero,
+                        ).animate(animation);
+                        return FadeTransition(
+                          opacity: fadeAnimation,
+                          child: SlideTransition(
+                            position: slideAnimation,
+                            child: child,
+                          ),
+                        );
+                      },
+                      child: Column(
+                        key: ValueKey(page.title),
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            page.image,
+                            height: 260,
+                          ),
+                          const SizedBox(height: 32),
+                          Text(
+                            page.title,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                              color: ColorCollection.gray900,
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            page.description,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              height: 1.5,
+                              color: ColorCollection.gray700,
+                            ),
+                          ),
+                        ],
                       ),
                     );
                   },
-                  child: OnboardingPage(
-                    imageAsset: pages[index]['image']!,
-                    title: pages[index]['title']!,
-                    description: pages[index]['desc']!,
-                    buttonText: pages[index]['btn']!,
-                    onPressed: _onNextPressed,
-                  ),
-                );
-              },
-            ),
-            Positioned(
-              bottom: 30,
-              child: SmoothPageIndicator(
-                controller: _controller,
-                count: pages.length,
-                effect: const ExpandingDotsEffect(
-                  activeDotColor: Colors.white,
-                  dotColor: Colors.white38,
-                  dotHeight: 8,
-                  dotWidth: 8,
-                  expansionFactor: 3,
                 ),
               ),
-            ),
-          ],
+
+              const SizedBox(height: 20),
+
+              /// Индикаторы страниц
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  pages.length,
+                  (index) => AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    margin: const EdgeInsets.symmetric(horizontal: 4),
+                    height: 8,
+                    width: _currentPage == index ? 24 : 8,
+                    decoration: BoxDecoration(
+                      color: _currentPage == index
+                          ? ColorCollection.primary
+                          : ColorCollection.gray300,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 32),
+
+              /// Кнопка "Далее / Начать"
+              AnimatedSwitcher(
+                duration: const Duration(milliseconds: 400),
+                child: SizedBox(
+                  key: ValueKey(_currentPage),
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: _nextPage,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: ColorCollection.primary,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                    ),
+                    child: Text(
+                      pages[_currentPage].button,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: ColorCollection.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

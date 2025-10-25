@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:own/core/router/app_router.dart';
+import 'core/storage/hive_storage.dart';
+import 'features/journal/presentation/pages/main_page.dart';
 
-
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await HiveStorage.init();
   runApp(const ProviderScope(child: FamilyNotesApp()));
 }
-
-
 
 class FamilyNotesApp extends StatelessWidget {
   const FamilyNotesApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),      
-      darkTheme: ThemeData.light(),   
-      routerConfig: appRouter,
+      home: MainPage(),
     );
   }
 }
+
