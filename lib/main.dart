@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:own/features/auth/presentation/screens/login_screen.dart';
+import 'package:own/features/auth/presentation/screens/register_screen.dart';
+import 'package:own/features/journal/presentation/pages/journal_page.dart';
+import 'package:own/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'core/storage/hive_storage.dart';
-import 'features/journal/presentation/pages/main_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +19,7 @@ class FamilyNotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: JournalPage(),
     );
   }
 }

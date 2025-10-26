@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:own/core/router/domain/app_routes.dart';
+import 'package:own/core/storage/hive_storage.dart';
 import 'package:own/core/theme/model/color_collection.dart';
-import 'package:own/features/auth/widgets/auth_button.dart';
 import 'package:own/features/auth/widgets/auth_header.dart';
 import 'package:own/features/auth/widgets/auth_text_field.dart';
 
@@ -19,17 +19,14 @@ class _LoginScreenState extends State<LoginScreen> {
   final _passwordController = TextEditingController();
 
   bool _isPasswordVisible = false;
-  bool _isLoading = false;
 
   void _login() async {
     if (!_formKey.currentState!.validate()) return;
 
-    setState(() => _isLoading = true);
     await Future.delayed(const Duration(seconds: 2)); // имитация API
-    setState(() => _isLoading = false);
 
     if (!mounted) return;
-    context.go(AppRoutes.main);
+    context.go(AppRoutes.jornal);
   }
 
   @override
@@ -52,7 +49,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
 
                   const SizedBox(height: 8),
-                 
 
                   /// Email
                   AuthTextField(
@@ -103,10 +99,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 32),
 
                   /// Кнопка входа
-                  AuthButton(
-                    text: 'Войти',
-                    isLoading: _isLoading,
-                    onPressed: _login,
+                  ElevatedButton(
+                    onPressed: () async {
+                      await HiveStorage.setLoggedIn(true);
+                      context.go(AppRoutes.jornal);
+                    },
+                    child: const Text("Войти"),
                   ),
                   const SizedBox(height: 20),
 

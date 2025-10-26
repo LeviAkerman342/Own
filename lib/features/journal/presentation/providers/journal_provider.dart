@@ -3,6 +3,7 @@ import '../../data/models/user_model.dart';
 
 final usersProvider = StateProvider<List<UserModel>>((ref) {
   return [
+    
     const UserModel(
       name: 'Мама',
       role: 'Главный кошелёк',
@@ -11,7 +12,7 @@ final usersProvider = StateProvider<List<UserModel>>((ref) {
     ),
     const UserModel(
       name: 'Папа',
-      role: 'Дополнительный счет',
+      role: 'Дополнительный счёт',
       avatarUrl: 'https://example.com/papa.jpg',
       balance: 26000,
     ),
@@ -22,4 +23,5 @@ final usersProvider = StateProvider<List<UserModel>>((ref) {
       balance: 0,
     ),
   ];
+
 });

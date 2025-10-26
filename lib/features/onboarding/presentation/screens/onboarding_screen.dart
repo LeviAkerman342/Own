@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:own/core/storage/hive_storage.dart';
 import 'package:own/core/theme/model/color_collection.dart';
 import 'package:own/core/router/domain/app_routes.dart';
 import 'package:own/features/onboarding/model/data.dart';
@@ -15,13 +16,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
-  void _nextPage() {
+  void _nextPage() async {
     if (_currentPage < pages.length - 1) {
       _pageController.nextPage(
         duration: const Duration(milliseconds: 400),
         curve: Curves.easeInOut,
       );
     } else {
+      // Сохраняем, что онбординг пройден
+      await HiveStorage.setFirstLaunchFalse();
+      // И переходим на экран входа
+      // ignore: use_build_context_synchronously
       context.go(AppRoutes.login);
     }
   }
@@ -67,35 +72,35 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         );
                       },
-                      child: Column(
+                      child: SingleChildScrollView(
                         key: ValueKey(page.title),
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            page.image,
-                            height: 260,
-                          ),
-                          const SizedBox(height: 32),
-                          Text(
-                            page.title,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              fontSize: 26,
-                              fontWeight: FontWeight.bold,
-                              color: ColorCollection.gray900,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(page.image, height: 260),
+                            const SizedBox(height: 32),
+                            Text(
+                              page.title,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold,
+                                color: ColorCollection.gray900,
+                              ),
                             ),
-                          ),
-                          const SizedBox(height: 16),
-                          Text(
-                            page.description,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              height: 1.5,
-                              color: ColorCollection.gray700,
+                            const SizedBox(height: 16),
+                            Text(
+                              page.description,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                height: 1.5,
+                                color: ColorCollection.gray700,
+                              ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 24),
+                          ],
+                        ),
                       ),
                     );
                   },
@@ -126,28 +131,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
               const SizedBox(height: 32),
 
-              /// Кнопка "Далее / Начать"
-              AnimatedSwitcher(
-                duration: const Duration(milliseconds: 400),
-                child: SizedBox(
-                  key: ValueKey(_currentPage),
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: _nextPage,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorCollection.primary,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(14),
-                      ),
+              /// Кнопка "Продолжить / Начать"
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: _nextPage,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: ColorCollection.primary,
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
                     ),
-                    child: Text(
-                      pages[_currentPage].button,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: ColorCollection.white,
-                      ),
+                  ),
+                  child: Text(
+                    pages[_currentPage].button,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: ColorCollection.white,
                     ),
                   ),
                 ),
