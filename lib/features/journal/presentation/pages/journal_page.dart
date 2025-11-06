@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:own/features/journal/presentation/providers/journal_provider.dart';
-import 'package:own/features/journal/presentation/widgets/bottom_nav_bar.dart';
+import 'package:own/features/journal/data/mock_users.dart';
+import 'package:own/features/journal/domain/entities/user_entity.dart';
 import 'package:own/features/journal/presentation/widgets/charts/spend_pie_chart.dart';
 import 'package:own/features/journal/presentation/widgets/charts/spend_bar_chart.dart';
 import 'package:own/features/journal/presentation/widgets/charts/user_spending_card.dart';
+// import 'package:own/features/journal/presentation/widgets/user_spending_card.dart';
+import 'package:own/features/journal/presentation/widgets/balance_card.dart';
+import 'package:own/features/journal/presentation/widgets/bottom_nav_bar.dart';
 
-class JournalPage extends ConsumerStatefulWidget {
+class JournalPage extends StatefulWidget {
   const JournalPage({super.key});
 
   @override
-  ConsumerState<JournalPage> createState() => _JournalPageState();
+  State<JournalPage> createState() => _JournalPageState();
 }
 
-class _JournalPageState extends ConsumerState<JournalPage> {
+class _JournalPageState extends State<JournalPage> {
   int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    final users = ref.watch(usersProvider);
+    //Считаем общий баланс
+    final totalBalance = mockUsers.fold<double>(
+      0,
+      (sum, user) => sum + user.balance,
+    );
 
     return Scaffold(
       backgroundColor: Colors.grey[100],
@@ -27,9 +33,12 @@ class _JournalPageState extends ConsumerState<JournalPage> {
         elevation: 0,
         centerTitle: true,
         title: const Text(
-          'Аналитика',
+          'Аналитика семьи',
           style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 22),
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -37,25 +46,38 @@ class _JournalPageState extends ConsumerState<JournalPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Общий баланс
+            BalanceCard(amount: totalBalance),
+            const SizedBox(height: 24),
+
+            //  Графики
             const Text(
               'Разбивка трат',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 12),
             const Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(child: SpendPieChart()),
+                Expanded(child: SizedBox(height: 200, child: SpendPieChart())),
                 SizedBox(width: 12),
-                Expanded(child: SpendBarChart()),
+                Expanded(child: SizedBox(height: 200, child: SpendBarChart())),
               ],
             ),
+
             const SizedBox(height: 24),
+
+            // 👨‍👩‍👧 Пользователи
             const Text(
               'Кто сколько потратил',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 12),
-            // ...users.map((u) => UserSpendingCard(user: ,)),
+            Column(
+              children: mockUsers
+                  .map((user) => UserSpendingCard(user: user))
+                  .toList(),
+            ),
           ],
         ),
       ),
@@ -67,9 +89,7 @@ class _JournalPageState extends ConsumerState<JournalPage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavBar(
         currentIndex: _currentIndex,
-        onTabSelected: (index) {
-          setState(() => _currentIndex = index);
-        },
+        onTabSelected: (index) => setState(() => _currentIndex = index),
       ),
     );
   }

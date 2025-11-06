@@ -28,7 +28,7 @@ class AuthTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         filled: true,
-        fillColor: ColorCollection.gray800,
+        fillColor: const Color.fromARGB(255, 226, 226, 226),
         prefixIcon: icon != null
             ? Icon(icon, color: ColorCollection.gray700)
             : null,

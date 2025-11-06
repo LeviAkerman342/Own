@@ -34,6 +34,9 @@ class HiveStorage {
   }
 
   static Future<void> setFirstLaunchFalse() async {
+    if (!Hive.isBoxOpen(appBox)) {
+      await Hive.openBox(appBox);
+    }
     final box = Hive.box(appBox);
     await box.put('isFirstLaunch', false);
   }

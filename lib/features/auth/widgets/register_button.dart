@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:own/core/theme/model/color_collection.dart';
 
-class AuthButton extends StatelessWidget {
+class RegisterButton extends StatelessWidget {
   final String text;
   final VoidCallback? onPressed;
   final bool isLoading;
 
-  const AuthButton({
+  const RegisterButton({
     super.key,
     required this.text,
     this.onPressed,
@@ -22,6 +22,7 @@ class AuthButton extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
+              // ignore: deprecated_member_use
               color: ColorCollection.primary.withOpacity(0.25),
               blurRadius: 12,
               offset: const Offset(0, 6),

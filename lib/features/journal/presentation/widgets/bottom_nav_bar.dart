@@ -20,11 +20,11 @@ class BottomNavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavItem(Icons.home_outlined, "Home", 0),
-            _buildNavItem(Icons.insights_outlined, "Insight", 1),
+            _buildNavItem(Icons.home_outlined, "Главная", 0),
+            _buildNavItem(Icons.insights_outlined, "Аналитика", 1),
             const SizedBox(width: 40), // место под плавающую кнопку
-            _buildNavItem(Icons.credit_card_outlined, "Cards", 2),
-            _buildNavItem(Icons.person_outline, "Account", 3),
+            _buildNavItem(Icons.credit_card_outlined, "Карты", 2),
+            _buildNavItem(Icons.person_outline, "Профиль", 3),
           ],
         ),
       ),

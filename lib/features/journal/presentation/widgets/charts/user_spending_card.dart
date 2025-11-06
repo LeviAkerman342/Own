@@ -14,9 +14,11 @@ class UserSpendingCard extends StatelessWidget {
       elevation: 1,
       child: ListTile(
         leading: CircleAvatar(
-          backgroundImage: NetworkImage(user.avatarUrl),
           radius: 24,
+          backgroundColor: Colors.grey[300],
+          child: Text(user.name[0]), // первая буква имени
         ),
+
         title: Text(
           user.name,
           style: const TextStyle(fontWeight: FontWeight.w600),
