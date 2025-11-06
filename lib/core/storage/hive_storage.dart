@@ -28,26 +28,32 @@ class HiveStorage {
   }
 
   // ------------------ APP SETTINGS ------------------
-  static bool isFirstLaunch() {
-    final box = Hive.box(appBox);
-    return box.get('isFirstLaunch', defaultValue: true);
-  }
+ static bool isFirstLaunch() {
+  final box = Hive.box<dynamic>(appBox);
+  return box.get('isFirstLaunch', defaultValue: true);
+}
+
 
   static Future<void> setFirstLaunchFalse() async {
     if (!Hive.isBoxOpen(appBox)) {
-      await Hive.openBox(appBox);
+      await Hive.openBox<dynamic>(appBox);
     }
-    final box = Hive.box(appBox);
+    final box = Hive.box<dynamic>(appBox);
     await box.put('isFirstLaunch', false);
   }
 
-  static bool isLoggedIn() {
-    final box = Hive.box(appBox);
-    return box.get('isLoggedIn', defaultValue: false);
-  }
+ static bool isLoggedIn() {
+  final box = Hive.box<dynamic>(appBox);
+  return box.get('isLoggedIn', defaultValue: false);
+}
 
-  static Future<void> setLoggedIn(bool value) async {
-    final box = Hive.box(appBox);
-    await box.put('isLoggedIn', value);
+
+ static Future<void> setLoggedIn(bool value) async {
+  if (!Hive.isBoxOpen(appBox)) {
+    await Hive.openBox<dynamic>(appBox);
   }
+  final box = Hive.box<dynamic>(appBox);
+  await box.put('isLoggedIn', value);
+}
+
 }

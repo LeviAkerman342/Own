@@ -16,29 +16,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
-void _nextPage() {
-  if (_currentPage < pages.length - 1) {
-    // Переход на следующую страницу
-    _pageController.nextPage(
-      duration: const Duration(milliseconds: 400),
-      curve: Curves.easeInOut,
-    );
-  } else {
-    // Последняя страница — сохраняем флаг и переходим на логин
-    HiveStorage.setFirstLaunchFalse().then((_) {
-      if (mounted) {
-        GoRouter.of(context).go(AppRoutes.login);
+  void _nextPage() async {
+    if (_currentPage < pages.length - 1) {
+      _pageController.nextPage(
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeInOut,
+      );
+    } else {
+      try {
+        await HiveStorage.setFirstLaunchFalse();
+        if (mounted) context.go(AppRoutes.login);
+      } catch (error) {
+        debugPrint('Ошибка Hive: $error');
+        if (mounted) context.go(AppRoutes.login);
       }
-    }).catchError((error) {
-      // Обработка ошибки записи в Hive (на всякий случай)
-      debugPrint('Ошибка при сохранении флага онбординга: $error');
-      if (mounted) {
-        GoRouter.of(context).go(AppRoutes.login);
-      }
-    });
+    }
   }
-}
-
 
   @override
   Widget build(BuildContext context) {

@@ -8,10 +8,11 @@ import 'package:own/features/journal/presentation/pages/journal_page.dart';
 import 'package:own/features/onboarding/presentation/screens/onboarding_screen.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
+  // читаем состояния из Hive
   final bool firstLaunch = HiveStorage.isFirstLaunch();
   final bool loggedIn = HiveStorage.isLoggedIn();
 
-  // ⚙️ Определяем, какой экран открыть первым
+  //  определяем, с чего начать
   String initialLocation;
   if (firstLaunch) {
     initialLocation = AppRoutes.onboarding;
