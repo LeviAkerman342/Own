@@ -20,14 +20,33 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isPasswordVisible = false;
   bool _isLoading = false;
 
+  /// Имитирует отправку в "БД" и сохраняет данные локально
+  Future<void> _fakeSendToDatabase(String email, String password) async {
+    // тут имитация фейкового запроса
+    await Future.delayed(const Duration(seconds: 1));
+    // и сохранение в Hive
+    await HiveStorage.setUserEmail(email);
+    await HiveStorage.setUserPassword(password);
+  }
+
   void _login() async {
     if (!_formKey.currentState!.validate()) return;
 
     setState(() => _isLoading = true);
-    await Future.delayed(const Duration(seconds: 2)); // имитация API
+
+    // Фейковая отправка "в базу"
+    await _fakeSendToDatabase(
+      _emailController.text.trim(),
+      _passwordController.text.trim(),
+    );
+
+    // Имитация проверки и задержки API
+    await Future.delayed(const Duration(seconds: 1));
+
     setState(() => _isLoading = false);
 
     if (!mounted) return;
+
     await HiveStorage.setLoggedIn(true);
     context.go(AppRoutes.jornal);
   }
@@ -49,7 +68,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   borderRadius: BorderRadius.circular(28),
                   boxShadow: [
                     BoxShadow(
-                      // ignore: deprecated_member_use
                       color: Colors.black.withOpacity(0.05),
                       blurRadius: 12,
                       offset: const Offset(0, 4),
@@ -108,8 +126,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         if (value == null || value.isEmpty) {
                           return 'Введите e-mail';
                         }
-                        if (!value.contains('@')) {
-                          return 'Неверный формат e-mail';
+                        if (!value.contains('@') || !value.contains('.')) {
+                          return 'Некорректный e-mail';
                         }
                         return null;
                       },
@@ -144,7 +162,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
 
-                    /// Забыли пароль
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
@@ -188,16 +205,13 @@ class _LoginScreenState extends State<LoginScreen> {
                               )
                             : AuthButton(
                                 text: "Войти в аккаунт",
-                                onPressed: () {
-                                  // обработка регистрации
-                                },
+                                onPressed: _login,
                               ),
                       ),
                     ),
 
                     const SizedBox(height: 20),
 
-                    /// Или
                     Row(
                       children: [
                         Expanded(
@@ -227,7 +241,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     const SizedBox(height: 20),
 
-                    /// Кнопка Google
                     _buildSocialButton(
                       icon: Icons.g_mobiledata_rounded,
                       text: "Продолжить с Google",
@@ -235,7 +248,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 12),
 
-                    /// Кнопка Apple
                     _buildSocialButton(
                       icon: Icons.apple,
                       text: "Войти с Apple ID",
@@ -244,7 +256,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     const SizedBox(height: 16),
 
-                    /// Регистрация
                     Center(
                       child: GestureDetector(
                         onTap: () => context.go(AppRoutes.register),
