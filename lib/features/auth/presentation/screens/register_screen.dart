@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:own/core/router/domain/app_routes.dart';
+import 'package:own/core/storage/hive_storage.dart';
 import 'package:own/features/auth/widgets/auth_text_field.dart';
 import 'package:own/features/auth/widgets/register_button.dart';
 import '../cubit/register_cubit.dart';
@@ -21,15 +22,43 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   bool _isPasswordVisible = false;
   bool _isLoading = false;
-
-  void _register() {
+  void _register() async {
     if (!_formKey.currentState!.validate()) return;
 
-    context.read<RegisterCubit>().register(
-          _emailController.text.trim(),
-          _passwordController.text.trim(),
-          _confirmPasswordController.text.trim(),
-        );
+    setState(() => _isLoading = true);
+
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+
+    // Проверяем, есть ли уже пользователь
+    final exists = await HiveStorage.checkUserExists(email);
+    if (exists) {
+      setState(() => _isLoading = false);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Пользователь с таким email уже существует'),
+          backgroundColor: Colors.redAccent,
+        ),
+      );
+      return;
+    }
+
+    // Сохраняем нового пользователя
+    await HiveStorage.saveRegisteredUser(email, password);
+    await HiveStorage.setUserEmail(email);
+    await HiveStorage.setUserPassword(password);
+
+    setState(() => _isLoading = false);
+
+    if (!mounted) return;
+
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('Регистрация успешна!')));
+
+    // Переходим на экран входа
+    context.go(AppRoutes.login);
   }
 
   @override
@@ -43,16 +72,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
         }
 
         if (state is RegisterSuccess) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Регистрация успешна!')),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(const SnackBar(content: Text('Регистрация успешна!')));
           context.go(AppRoutes.login);
         }
 
         if (state is RegisterError) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(state.message)),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text(state.message)));
         }
       },
       child: Scaffold(
@@ -149,7 +178,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         height: 48,
                         child: _isLoading
                             ? const Center(
-                                child: CircularProgressIndicator(strokeWidth: 2.5),
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2.5,
+                                ),
                               )
                             : RegisterButton(
                                 text: 'Создать аккаунт',

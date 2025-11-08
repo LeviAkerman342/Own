@@ -34,21 +34,31 @@ class _LoginScreenState extends State<LoginScreen> {
 
     setState(() => _isLoading = true);
 
-    // Фейковая отправка "в базу"
-    await _fakeSendToDatabase(
-      _emailController.text.trim(),
-      _passwordController.text.trim(),
-    );
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
 
-    // Имитация проверки и задержки API
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(milliseconds: 800)); // имитация API
+
+    final isValid = await HiveStorage.validateUser(email, password);
 
     setState(() => _isLoading = false);
 
     if (!mounted) return;
 
-    await HiveStorage.setLoggedIn(true);
-    context.go(AppRoutes.jornal);
+    if (isValid) {
+      await HiveStorage.setLoggedIn(true);
+      await HiveStorage.setUserEmail(email);
+      await HiveStorage.setUserPassword(password);
+
+      context.go(AppRoutes.jornal); // переход в приложение
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Неверный email или пароль'),
+          backgroundColor: Colors.redAccent,
+        ),
+      );
+    }
   }
 
   @override

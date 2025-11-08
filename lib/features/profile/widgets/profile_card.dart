@@ -1,57 +1,60 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:own/features/journal/presentation/providers/journal_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-
-class ProfileCard extends ConsumerWidget {
+class ProfileCard extends StatefulWidget {
   const ProfileCard({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final users = ref.watch(usersProvider);
+  State<ProfileCard> createState() => _ProfileCardState();
+}
 
-    // Для примера — возьмём первого пользователя (можно передавать индекс или id)
-    final user = users.first;
+class _ProfileCardState extends State<ProfileCard> {
+  String? userEmail;
 
+  @override
+  void initState() {
+    super.initState();
+    _loadUserData();
+  }
+
+  Future<void> _loadUserData() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      userEmail = prefs.getString('user_email');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
+      elevation: 3,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      margin: const EdgeInsets.all(16),
-      elevation: 2,
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(20),
         child: Row(
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 28,
-              backgroundImage: NetworkImage(user.avatarUrl),
+              backgroundColor: Colors.blueAccent,
+              child: Icon(Icons.person, color: Colors.white, size: 28),
             ),
             const SizedBox(width: 16),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    user.name,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 18),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  userEmail ?? "Загрузка...",
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
                   ),
-                  Text(
-                    "@${user.role}", // у тебя нет username в UserModel, поэтому используем role
-                    style: TextStyle(color: Colors.grey[600], fontSize: 13),
-                  ),
-                  const SizedBox(height: 8),
-                  Row(
-                    children: [
-                      Text(
-                        "Баланс: ${user.balance.toStringAsFixed(0)} ₽",
-                        style: const TextStyle(fontSize: 14),
-                      ),
-                      const Spacer(),
-                      Icon(Icons.edit, size: 18, color: Colors.grey[600]),
-                    ],
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(height: 4),
+                const Text(
+                  "Аккаунт пользователя",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ],
             ),
           ],
         ),

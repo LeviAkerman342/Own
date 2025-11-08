@@ -42,8 +42,9 @@ class HiveStorage {
   }
 
   static bool isLoggedIn() {
-    final box = Hive.box<dynamic>(appBox);
-    return box.get('isLoggedIn', defaultValue: false);
+    // final box = Hive.box<dynamic>(appBox);
+    // return box.get('isLoggedIn', defaultValue: false);
+    return Hive.box('user').get('isLoggedIn', defaultValue: false);
   }
 
   static Future<void> setLoggedIn(bool value) async {
@@ -52,6 +53,7 @@ class HiveStorage {
     }
     final box = Hive.box<dynamic>(appBox);
     await box.put('isLoggedIn', value);
+    await Hive.box('user').put('isLoggedIn', value);
   }
 
   static Future<void> saveRegisteredUser(String email, String password) async {
@@ -78,5 +80,9 @@ class HiveStorage {
     final box = await Hive.openBox('usersBox');
     final storedPassword = box.get(email);
     return storedPassword == password;
+  }
+
+  static Future<void> logout() async {
+    await Hive.box('user').put('isLoggedIn', false);
   }
 }

@@ -2,20 +2,26 @@ import 'package:flutter/material.dart';
 
 class LogoutButton extends StatelessWidget {
   final VoidCallback onPressed;
+
   const LogoutButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xFF007BFF),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        minimumSize: const Size(double.infinity, 48),
-      ),
-      child: const Text(
-        "Выйти из аккаунта",
-        style: TextStyle(color: Colors.white, fontSize: 16),
+    return Center(
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.redAccent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+        ),
+        onPressed: onPressed,
+        icon: const Icon(Icons.logout, color: Colors.white),
+        label: const Text(
+          "Выйти",
+          style: TextStyle(color: Colors.white, fontSize: 16),
+        ),
       ),
     );
   }

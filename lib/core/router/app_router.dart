@@ -6,6 +6,7 @@ import 'package:own/features/auth/presentation/screens/login_screen.dart';
 import 'package:own/features/auth/presentation/screens/register_screen.dart';
 import 'package:own/features/journal/presentation/pages/journal_page.dart';
 import 'package:own/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:own/features/profile/screen/profile_page.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
   // читаем состояния из Hive
@@ -40,6 +41,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.jornal,
         builder: (context, state) => const JournalPage(),
+      ),
+      GoRoute(
+        path: AppRoutes.profile,
+        builder: (context, state) => const ProfileScreen(),
       ),
     ],
   );

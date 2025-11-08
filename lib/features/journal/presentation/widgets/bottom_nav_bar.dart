@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:own/core/router/domain/app_routes.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int currentIndex;
@@ -20,21 +22,26 @@ class BottomNavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavItem(Icons.home_outlined, "Главная", 0),
-            _buildNavItem(Icons.insights_outlined, "Аналитика", 1),
-            const SizedBox(width: 40), // место под плавающую кнопку
-            _buildNavItem(Icons.credit_card_outlined, "Карты", 2),
-            _buildNavItem(Icons.person_outline, "Профиль", 3),
+            _buildNavItem(context, Icons.home_outlined, "Главная", 0),
+            _buildNavItem(context, Icons.insights_outlined, "Аналитика", 1),
+            const SizedBox(width: 40),
+            _buildNavItem(context, Icons.credit_card_outlined, "Карты", 2),
+            _buildNavItem(context, Icons.person_outline, "Профиль", 3),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildNavItem(IconData icon, String label, int index) {
+  Widget _buildNavItem(BuildContext context, IconData icon, String label, int index) {
     final isSelected = index == currentIndex;
     return InkWell(
-      onTap: () => onTabSelected(index),
+      onTap: () {
+        onTabSelected(index);
+        if (label == "Профиль") {
+          context.go(AppRoutes.profile);
+        }
+      },
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

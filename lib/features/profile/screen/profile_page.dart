@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:own/core/router/domain/app_routes.dart';
+import 'package:own/core/storage/hive_storage.dart';
 import '../widgets/profile_card.dart';
 import '../widgets/profile_setting_tile.dart';
 import '../widgets/logout_button.dart';
@@ -13,16 +16,7 @@ class ProfileScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final isDarkMode = ref.watch(darkModeProvider);
-
-    // Можно также подгружать пользователя через провайдер, пока жёстко прописан пример
-    // const user = UserProfileEntity(
-    //   name: "Мама",
-    //   username: "familymom",
-    //   avatarUrl: "https://i.pravatar.cc/150?img=2",
-    //   subscription: "Премиум",
-    //   isPremium: true,
-    // );
+  
 
     return Scaffold(
       backgroundColor: const Color(0xFFF8F8F8),
@@ -85,8 +79,11 @@ class ProfileScreen extends ConsumerWidget {
 
             // 🚪 Кнопка выхода
             LogoutButton(
-              onPressed: () {
-                // TODO: добавить логику выхода
+                onPressed: () async {
+                await HiveStorage.logout();
+                if (context.mounted) {
+                  context.go(AppRoutes.login);
+                }
               },
             ),
           ],
