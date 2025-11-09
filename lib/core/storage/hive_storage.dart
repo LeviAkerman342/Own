@@ -11,6 +11,8 @@ class HiveStorage {
     Hive.registerAdapter(UserModelAdapter());
     await Hive.openBox<UserModel>(userBox);
     await Hive.openBox(appBox);
+    await Hive.openBox('usersBox');
+    await Hive.openBox('authBox');
   }
 
   // ------------------ USERS ------------------
@@ -29,60 +31,53 @@ class HiveStorage {
 
   // ------------------ APP SETTINGS ------------------
   static bool isFirstLaunch() {
-    final box = Hive.box<dynamic>(appBox);
+    final box = Hive.box(appBox);
     return box.get('isFirstLaunch', defaultValue: true);
   }
 
   static Future<void> setFirstLaunchFalse() async {
-    if (!Hive.isBoxOpen(appBox)) {
-      await Hive.openBox<dynamic>(appBox);
-    }
-    final box = Hive.box<dynamic>(appBox);
+    final box = Hive.box(appBox);
     await box.put('isFirstLaunch', false);
   }
 
   static bool isLoggedIn() {
-    // final box = Hive.box<dynamic>(appBox);
-    // return box.get('isLoggedIn', defaultValue: false);
-    return Hive.box('user').get('isLoggedIn', defaultValue: false);
+    final box = Hive.box(appBox);
+    return box.get('isLoggedIn', defaultValue: false);
   }
 
   static Future<void> setLoggedIn(bool value) async {
-    if (!Hive.isBoxOpen(appBox)) {
-      await Hive.openBox<dynamic>(appBox);
-    }
-    final box = Hive.box<dynamic>(appBox);
+    final box = Hive.box(appBox);
     await box.put('isLoggedIn', value);
-    await Hive.box('user').put('isLoggedIn', value);
   }
 
   static Future<void> saveRegisteredUser(String email, String password) async {
-    final box = await Hive.openBox('usersBox');
+    final box = Hive.box('usersBox');
     await box.put(email, password);
   }
 
   static Future<void> setUserEmail(String email) async {
-    final box = await Hive.openBox('authBox');
+    final box = Hive.box('authBox');
     await box.put('email', email);
   }
 
   static Future<void> setUserPassword(String password) async {
-    final box = await Hive.openBox('authBox');
+    final box = Hive.box('authBox');
     await box.put('password', password);
   }
 
   static Future<bool> checkUserExists(String email) async {
-    final box = await Hive.openBox('usersBox');
+    final box = Hive.box('usersBox');
     return box.containsKey(email);
   }
 
   static Future<bool> validateUser(String email, String password) async {
-    final box = await Hive.openBox('usersBox');
+    final box = Hive.box('usersBox');
     final storedPassword = box.get(email);
     return storedPassword == password;
   }
 
   static Future<void> logout() async {
-    await Hive.box('user').put('isLoggedIn', false);
+    final box = Hive.box(appBox);
+    await box.put('isLoggedIn', false);
   }
 }
