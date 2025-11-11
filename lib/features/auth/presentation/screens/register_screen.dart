@@ -17,9 +17,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
+  final _nameController = TextEditingController();
 
   bool _isPasswordVisible = false;
   bool _isLoading = false;
+
+  Future<void> _uploadProfileToBackend(String name, String email) async {
+    await Future.delayed(const Duration(seconds: 2));
+    print('Отправлено на фейковый сервер: $name, $email');
+  }
 
   Future<void> _register() async {
     if (!_formKey.currentState!.validate()) return;
@@ -28,6 +34,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     final email = _emailController.text.trim();
     final password = _passwordController.text.trim();
+    final name = _nameController.text.trim();
+    await HiveStorage.setUserName(name);
 
     final exists = await HiveStorage.checkUserExists(email);
     if (exists) {
@@ -93,6 +101,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         color: Color(0xFF1F3558),
                       ),
                     ),
+                    const SizedBox(height: 32),
+
+                    AuthTextField(
+                      controller: _nameController,
+                      hintText: 'Имя пользователя',
+                      icon: Icons.person_outline,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Введите имя';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 16),
+
                     const SizedBox(height: 32),
                     AuthTextField(
                       controller: _emailController,

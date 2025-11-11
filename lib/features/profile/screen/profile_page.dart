@@ -16,8 +16,6 @@ class ProfileScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-  
-
     return Scaffold(
       backgroundColor: const Color(0xFFF8F8F8),
       appBar: AppBar(
@@ -30,7 +28,7 @@ class ProfileScreen extends ConsumerWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => context.go(AppRoutes.jornal),
         ),
       ),
       body: SingleChildScrollView(
@@ -79,7 +77,7 @@ class ProfileScreen extends ConsumerWidget {
 
             // 🚪 Кнопка выхода
             LogoutButton(
-                onPressed: () async {
+              onPressed: () async {
                 await HiveStorage.logout();
                 if (context.mounted) {
                   context.go(AppRoutes.login);

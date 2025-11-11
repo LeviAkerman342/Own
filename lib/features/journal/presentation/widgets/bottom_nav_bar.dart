@@ -33,13 +33,26 @@ class BottomNavBar extends StatelessWidget {
     );
   }
 
-  Widget _buildNavItem(BuildContext context, IconData icon, String label, int index) {
+  Widget _buildNavItem(
+    BuildContext context,
+    IconData icon,
+    String label,
+    int index,
+  ) {
     final isSelected = index == currentIndex;
+
     return InkWell(
       onTap: () {
         onTabSelected(index);
+
         if (label == "Профиль") {
           context.go(AppRoutes.profile);
+        } else if (label == "Аналитика") {
+          context.go(AppRoutes.analitics);
+        } else if (label == "Главная") {
+          context.go(AppRoutes.jornal);
+        } else if (label == "Карты") {
+          // context.go(AppRoutes.cards);
         }
       },
       child: Column(

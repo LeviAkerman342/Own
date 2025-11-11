@@ -1,5 +1,8 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:hive/hive.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:own/core/storage/hive_storage.dart';
 
 class ProfileCard extends StatefulWidget {
   const ProfileCard({super.key});
@@ -9,52 +12,65 @@ class ProfileCard extends StatefulWidget {
 }
 
 class _ProfileCardState extends State<ProfileCard> {
-  String? userEmail;
+  File? _imageFile;
+  String? _name;
+  String? _email;
 
   @override
   void initState() {
     super.initState();
-    _loadUserData();
+    _name = HiveStorage.getUserName();
+    _email = Hive.box('authBox').get('email');
+    final photoPath = HiveStorage.getUserPhoto();
+    if (photoPath != null) _imageFile = File(photoPath);
   }
 
-  Future<void> _loadUserData() async {
-    final prefs = await SharedPreferences.getInstance();
-    setState(() {
-      userEmail = prefs.getString('user_email');
-    });
+  Future<void> _pickImage() async {
+    final picker = ImagePicker();
+    final picked = await picker.pickImage(source: ImageSource.gallery);
+    if (picked != null) {
+      await HiveStorage.setUserPhoto(picked.path);
+      setState(() => _imageFile = File(picked.path));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 3,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(16),
         child: Row(
           children: [
-            const CircleAvatar(
-              radius: 28,
-              backgroundColor: Colors.blueAccent,
-              child: Icon(Icons.person, color: Colors.white, size: 28),
+            GestureDetector(
+              onTap: _pickImage,
+              child: CircleAvatar(
+                radius: 38,
+                backgroundImage: _imageFile != null
+                    ? FileImage(_imageFile!)
+                    : const AssetImage('assets/images/avatar_placeholder.png')
+                          as ImageProvider,
+              ),
             ),
             const SizedBox(width: 16),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  userEmail ?? "Загрузка...",
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    _name ?? "Имя не указано",
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 4),
-                const Text(
-                  "Аккаунт пользователя",
-                  style: TextStyle(color: Colors.grey),
-                ),
-              ],
+                  const SizedBox(height: 4),
+                  Text(
+                    _email ?? "Email не найден",
+                    style: const TextStyle(fontSize: 14, color: Colors.grey),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

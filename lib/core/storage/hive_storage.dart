@@ -1,6 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:own/features/journal/data/models/user_model.dart';
-import 'package:own/features/journal/data/models/user_model.g.dart';
 
 class HiveStorage {
   static const String userBox = 'user_box';
@@ -8,7 +7,7 @@ class HiveStorage {
 
   static Future<void> init() async {
     await Hive.initFlutter();
-    Hive.registerAdapter(UserModelAdapter());
+    // Hive.registerAdapter(UserModelAdapter());
     await Hive.openBox<UserModel>(userBox);
     await Hive.openBox(appBox);
     await Hive.openBox('usersBox');
@@ -79,5 +78,25 @@ class HiveStorage {
   static Future<void> logout() async {
     final box = Hive.box(appBox);
     await box.put('isLoggedIn', false);
+  }
+
+  static Future<void> setUserName(String name) async {
+    final box = await Hive.openBox('authBox');
+    await box.put('name', name);
+  }
+
+  static String? getUserName() {
+    final box = Hive.box('authBox');
+    return box.get('name');
+  }
+
+  static Future<void> setUserPhoto(String path) async {
+    final box = await Hive.openBox('authBox');
+    await box.put('photo', path);
+  }
+
+  static String? getUserPhoto() {
+    final box = Hive.box('authBox');
+    return box.get('photo');
   }
 }

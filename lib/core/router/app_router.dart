@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:own/core/router/domain/app_routes.dart';
 import 'package:own/core/storage/hive_storage.dart';
+import 'package:own/features/analytics/presentation/screens/analytics_screen.dart';
 import 'package:own/features/auth/presentation/screens/login_screen.dart';
 import 'package:own/features/auth/presentation/screens/register_screen.dart';
 import 'package:own/features/journal/presentation/pages/journal_page.dart';
@@ -45,6 +46,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.profile,
         builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.analitics,
+        builder: (context, state) => const AnalyticsScreen(),
       ),
     ],
   );
