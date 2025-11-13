@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:own/core/router/domain/app_routes.dart';
+import 'package:own/features/notes/presentation/screens/add_note_screen.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int currentIndex;
@@ -14,95 +15,112 @@ class BottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const blue = Color(0xFF007BFF);
+    const blue = Color(0xFF3B82F6);
+    const background = Color(0xFF0F111A);
     const iconSize = 26.0;
 
-    return Container(
-      height: 85,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(30)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.3),
-            blurRadius: 12,
-            offset: const Offset(0, -2),
-          ),
-        ],
-      ),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildNavItem(
-                context,
-                Icons.home_outlined,
-                "Главная",
-                0,
-                blue,
-                iconSize,
-              ),
-              _buildNavItem(
-                context,
-                Icons.insights_outlined,
-                "Аналитика",
-                1,
-                blue,
-                iconSize,
-              ),
-              const SizedBox(width: 70),
-              _buildNavItem(
-                context,
-                Icons.credit_card_outlined,
-                "Карты",
-                2,
-                blue,
-                iconSize,
-              ),
-              _buildNavItem(
-                context,
-                Icons.person_outline,
-                "Профиль",
-                3,
-                blue,
-                iconSize,
-              ),
-            ],
-          ),
-
-          // 🔵 Плавающая кнопка “+”
-          Positioned(
-            top: -25,
-            child: GestureDetector(
-              onTap: () {
-                // TODO: действие при нажатии "+"
-              },
-              child: Container(
-                height: 70,
-                width: 70,
-                decoration: BoxDecoration(
-                  color: blue,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: blue.withOpacity(0.6),
-                      blurRadius: 15,
-                      offset: const Offset(0, 6),
+    return SafeArea(
+      top: false,
+      child: Container(
+        height: 85,
+        decoration: BoxDecoration(
+          color: background,
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(28)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.5),
+              blurRadius: 20,
+              offset: const Offset(0, -4),
+            ),
+          ],
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            // 🔹 Навигационные кнопки
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 28),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _buildNavItem(
+                      context,
+                      Icons.home_outlined,
+                      "Главная",
+                      0,
+                      blue,
+                      iconSize,
+                    ),
+                    _buildNavItem(
+                      context,
+                      Icons.show_chart_rounded,
+                      "Аналитика",
+                      1,
+                      blue,
+                      iconSize,
+                    ),
+                    const SizedBox(width: 70),
+                    _buildNavItem(
+                      context,
+                      Icons.credit_card_outlined,
+                      "Карты",
+                      2,
+                      blue,
+                      iconSize,
+                    ),
+                    _buildNavItem(
+                      context,
+                      Icons.person_outline,
+                      "Профиль",
+                      3,
+                      blue,
+                      iconSize,
                     ),
                   ],
                 ),
-                child: const Icon(
-                  Icons.add_rounded,
-                  color: Colors.white,
-                  size: 32,
+              ),
+            ),
+
+            // 🔵 Плавающая кнопка "+"
+            Positioned(
+              top: -28,
+              child: GestureDetector(
+                onTap: () {
+                  context.push(AppRoutes.addNote);
+                },
+
+                child: Container(
+                  height: 68,
+                  width: 68,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF2563EB), Color(0xFF60A5FA)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: blue.withOpacity(0.7),
+                        blurRadius: 18,
+                        offset: const Offset(0, 6),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(
+                    Icons.add_rounded,
+                    color: Colors.white,
+                    size: 34,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -123,25 +141,35 @@ class BottomNavBar extends StatelessWidget {
         _navigateWithAnimation(context, label);
       },
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 300),
         curve: Curves.easeOutCubic,
-        height: 46,
-        width: 46,
+        height: 48,
+        width: 48,
         decoration: BoxDecoration(
-          color: isSelected
-              ? activeColor
-              : const Color.fromARGB(255, 80, 79, 79),
+          gradient: isSelected
+              ? const LinearGradient(
+                  colors: [Color(0xFF2563EB), Color(0xFF60A5FA)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                )
+              : null,
+          color: isSelected ? null : const Color(0xFF1C1F2A),
           shape: BoxShape.circle,
           boxShadow: isSelected
               ? [
                   BoxShadow(
-                    // ignore: deprecated_member_use
                     color: activeColor.withOpacity(0.5),
                     blurRadius: 12,
                     offset: const Offset(0, 4),
                   ),
                 ]
-              : [],
+              : [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.3),
+                    blurRadius: 8,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
         ),
         child: Icon(
           icon,
@@ -171,7 +199,6 @@ class BottomNavBar extends StatelessWidget {
         return;
     }
 
-    // ⚡ плавный переход
     Navigator.of(context).push(
       PageRouteBuilder(
         transitionDuration: const Duration(milliseconds: 350),

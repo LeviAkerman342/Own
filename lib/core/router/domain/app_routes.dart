@@ -6,4 +6,5 @@ abstract class AppRoutes {
   static const jornal = '/jornal';
   static const profile = '/profile';
   static const analitics = '/analitics';
+  static const addNote = '/add-note';
 }
