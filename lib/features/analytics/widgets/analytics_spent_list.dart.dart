@@ -1,50 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:own/features/analytics/data/models/transaction_model.dart';
-import 'transaction_tile.dart';
 
 class AnalyticsSpentList extends StatelessWidget {
-  final List<TransactionModel> transactions;
-
-  const AnalyticsSpentList({
-    required this.transactions,
-    super.key,
-  });
+  const AnalyticsSpentList({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          "Кто сколько потратил",
+        _item("Папа", "-15 000 ₽", Colors.red),
+        const SizedBox(height: 12),
+        _item("Мама", "-15 000 ₽", Colors.red),
+        const SizedBox(height: 12),
+        _item("Мама Ребёнок", "+5 000 ₽", Colors.green),
+        const SizedBox(height: 12),
+        _item("Племянник", "+3 000 ₽", Colors.green),
+      ],
+    );
+  }
+
+  Widget _item(String name, String value, Color color) {
+    return Row(
+      children: [
+        const CircleAvatar(radius: 18, backgroundColor: Colors.grey),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            name,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+          ),
+        ),
+        Text(
+          value,
           style: TextStyle(
-            fontSize: 17,
+            fontSize: 16,
+            color: color,
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 16),
-        if (transactions.isEmpty)
-          Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: Column(
-              children: [
-                Icon(Icons.hourglass_empty,
-                    size: 38, color: Colors.grey.shade400),
-                const SizedBox(height: 8),
-                Text(
-                  "Нет данных",
-                  style: TextStyle(color: Colors.grey.shade600),
-                ),
-              ],
-            ),
-          )
-        else
-          ...transactions.map(
-            (t) => Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: TransactionTile(transaction: t),
-            ),
-          ),
       ],
     );
   }
