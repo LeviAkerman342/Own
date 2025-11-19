@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:own/features/journal/data/mock_users.dart';
-import 'package:own/features/journal/domain/entities/user_entity.dart';
 import 'package:own/features/journal/presentation/widgets/charts/spend_pie_chart.dart';
 import 'package:own/features/journal/presentation/widgets/charts/spend_bar_chart.dart';
 import 'package:own/features/journal/presentation/widgets/charts/user_spending_card.dart';

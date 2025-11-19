@@ -6,7 +6,7 @@ import 'package:own/features/analytics/presentation/screens/analytics_screen.dar
 import 'package:own/features/auth/presentation/screens/login_screen.dart';
 import 'package:own/features/auth/presentation/screens/register_screen.dart';
 import 'package:own/features/journal/presentation/pages/journal_page.dart';
-import 'package:own/features/notes/presentation/screens/add_note_screen.dart';
+import 'package:own/features/transactions/presentation/screens/add_note_screen.dart';
 import 'package:own/features/onboarding/presentation/screens/onboarding_screen.dart';
 import 'package:own/features/profile/screen/profile_page.dart';
 
@@ -54,7 +54,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: AppRoutes.addNote,
-        builder: (context, state) => const AddNoteScreen(),
+        builder: (context, state) => const AddTransactionScreen(),
       ),
     ],
   );

@@ -11,7 +11,7 @@ class AnalyticsHeader extends StatelessWidget {
         IconButton(
           padding: EdgeInsets.zero,
           icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-          onPressed: () => context.pop(),
+          onPressed: () => context.go('/jornal'),
         ),
         const Expanded(
           child: Text(

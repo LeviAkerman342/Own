@@ -11,19 +11,31 @@ class FilterSelector extends ConsumerWidget {
     final selected = ref.watch(analyticsProvider).filter;
 
     Widget buildButton(String label, AnalyticsFilter value) {
+      final bool active = selected == value;
       return GestureDetector(
         onTap: () => ref.read(analyticsProvider.notifier).changeFilter(value),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
           decoration: BoxDecoration(
-            color: selected == value ? Colors.black : Colors.white,
-            borderRadius: BorderRadius.circular(12),
+            color: active ? Colors.black : Colors.white,
+            borderRadius: BorderRadius.circular(14),
             border: Border.all(color: Colors.black12),
+            boxShadow: active
+                ? [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10,
+                      offset: Offset(0, 3),
+                    ),
+                  ]
+                : null,
           ),
           child: Text(
             label,
             style: TextStyle(
-              color: selected == value ? Colors.white : Colors.black87,
+              color: active ? Colors.white : Colors.black87,
+              fontSize: 14,
               fontWeight: FontWeight.w600,
             ),
           ),
