@@ -40,7 +40,7 @@ class BottomNavBar extends StatelessWidget {
                   _item(context, Icons.home_outlined, "Главная", 0),
                   _item(context, Icons.show_chart_rounded, "Аналитика", 1),
                   const SizedBox(width: 60),
-                  _item(context, Icons.credit_card_outlined, "Карты", 2),
+                  _item(context, Icons.meeting_room, "Комната", 2),
                   _item(context, Icons.person_outline, "Профиль", 3),
                 ],
               ),

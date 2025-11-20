@@ -7,4 +7,5 @@ abstract class AppRoutes {
   static const profile = '/profile';
   static const analitics = '/analitics';
   static const addNote = '/add-note';
+  static const notificationSettings = '/notification-settings';
 }

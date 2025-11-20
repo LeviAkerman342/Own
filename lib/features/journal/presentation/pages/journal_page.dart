@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:own/core/router/domain/app_routes.dart';
 import 'package:own/features/journal/data/mock_users.dart';
 import 'package:own/features/journal/presentation/widgets/charts/spend_pie_chart.dart';
 import 'package:own/features/journal/presentation/widgets/charts/spend_bar_chart.dart';
@@ -82,7 +84,9 @@ class _JournalPageState extends State<JournalPage> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.black,
-        onPressed: () {},
+        onPressed: () {
+          context.push(AppRoutes.addNote);
+        },
         child: const Icon(Icons.add, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

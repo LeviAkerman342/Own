@@ -6,10 +6,6 @@ import 'package:own/core/storage/hive_storage.dart';
 import '../widgets/profile_card.dart';
 import '../widgets/profile_setting_tile.dart';
 import '../widgets/logout_button.dart';
-// import '../../domain/entities/user_profile_entity.dart';
-
-// Провайдер для переключения темы
-// final darkModeProvider = StateProvider<bool>((ref) => false);
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -36,11 +32,11 @@ class ProfileScreen extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🧍‍♀️ Карточка профиля
-            ProfileCard(),
+            // Карточка профиля
+            const ProfileCard(),
             const SizedBox(height: 24),
 
-            // 📦 Настройки
+            // Настройки
             const Text(
               "Аккаунт",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
@@ -56,12 +52,19 @@ class ProfileScreen extends ConsumerWidget {
                   ProfileSettingTile(
                     icon: Icons.dark_mode_outlined,
                     title: "Тёмная тема",
-                    // trailing: Switch(
-                    //   value: isDarkMode,
-                    //   onChanged: (value) {
-                    //     ref.read(darkModeProvider.notifier).state = value;
-                    //   },
-                    // ),
+                    // trailing: Switch(...), // если включишь потом
+                  ),
+                  const Divider(height: 0),
+                  ProfileSettingTile(
+                    icon: Icons.notifications_outlined,
+                    title: "Уведомления",
+                    trailing: const Icon(
+                      Icons.chevron_right,
+                      color: Colors.grey,
+                    ),
+                    onTap: () {
+                      context.push(AppRoutes.notificationSettings);
+                    },
                   ),
                   const Divider(height: 0),
                   const ProfileSettingTile(
@@ -75,7 +78,7 @@ class ProfileScreen extends ConsumerWidget {
 
             const SizedBox(height: 16),
 
-            // 🚪 Кнопка выхода
+            // Кнопка выхода
             LogoutButton(
               onPressed: () async {
                 await HiveStorage.logout();
