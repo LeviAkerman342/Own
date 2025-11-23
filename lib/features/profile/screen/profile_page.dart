@@ -1,93 +1,66 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:own/core/router/domain/app_routes.dart';
-import 'package:own/core/storage/hive_storage.dart';
-import '../widgets/profile_card.dart';
-import '../widgets/profile_setting_tile.dart';
-import '../widgets/logout_button.dart';
+import 'package:own/features/profile/bloc/profile_bloc.dart';
+import 'package:own/features/profile/domain/repositories/profile_repository_impl.dart';
+import '../widgets/profile_header.dart';
+import '../widgets/subscription_card.dart';
+import '../widgets/settings_section.dart';
+import '../widgets/sign_out_button.dart';
 
-class ProfileScreen extends ConsumerWidget {
+class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF8F8F8),
-      appBar: AppBar(
-        title: const Text(
-          "Профиль / Настройки",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => ProfileCubit(ProfileRepositoryImpl()),
+      child: Scaffold(
+        backgroundColor: const Color(0xFFF8FAFF),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: const Text(
+            'Профиль / Настройки',
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+          ),
+          centerTitle: true,
         ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => context.go(AppRoutes.jornal),
-        ),
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Карточка профиля
-            const ProfileCard(),
-            const SizedBox(height: 24),
-
-            // Настройки
-            const Text(
-              "Аккаунт",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 8),
-
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Column(
-                children: [
-                  ProfileSettingTile(
-                    icon: Icons.dark_mode_outlined,
-                    title: "Тёмная тема",
-                    // trailing: Switch(...), // если включишь потом
-                  ),
-                  const Divider(height: 0),
-                  ProfileSettingTile(
-                    icon: Icons.notifications_outlined,
-                    title: "Уведомления",
-                    trailing: const Icon(
-                      Icons.chevron_right,
-                      color: Colors.grey,
+        body: BlocConsumer<ProfileCubit, ProfileState>(
+          listener: (context, state) {
+            if (state is ProfileSignedOut) context.go('/login');
+          },
+          builder: (context, state) {
+            if (state is ProfileLoading) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (state is ProfileLoaded) {
+              final user = state.user;
+              return SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 16),
+                    // ProfileHeader(user: user),
+                    const SizedBox(height: 24),
+                    SubscriptionCard(user: user),
+                    const SizedBox(height: 32),
+                    SettingsSection(
+                      isDarkMode: user.isDarkModeEnabled,
+                      onDarkModeChanged: (v) =>
+                          context.read<ProfileCubit>().toggleDarkMode(v),
                     ),
-                    onTap: () {
-                      context.push(AppRoutes.notificationSettings);
-                    },
-                  ),
-                  const Divider(height: 0),
-                  const ProfileSettingTile(
-                    icon: Icons.download_outlined,
-                    title: "Экспорт данных",
-                    trailing: Icon(Icons.arrow_downward),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 16),
-
-            // Кнопка выхода
-            LogoutButton(
-              onPressed: () async {
-                await HiveStorage.logout();
-                if (context.mounted) {
-                  context.go(AppRoutes.login);
-                }
-              },
-            ),
-          ],
+                    const SizedBox(height: 40),
+                    SignOutButton(
+                      onPressed: () => context.read<ProfileCubit>().signOut(),
+                    ),
+                    const SizedBox(height: 40),
+                  ],
+                ),
+              );
+            }
+            return const Center(child: Text('Ошибка загрузки'));
+          },
         ),
       ),
     );

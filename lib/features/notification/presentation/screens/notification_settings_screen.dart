@@ -1,7 +1,9 @@
+// features/notification/presentation/screens/notification_settings_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:own/core/theme/model/color_collection.dart';
-import 'package:own/features/notification/domain/entities/notification_setting.dart';
+import '../../domain/entities/notification_setting.dart';
 import '../cubit/notification_settings_cubit.dart';
 
 class NotificationSettingsScreen extends StatelessWidget {
@@ -12,10 +14,20 @@ class NotificationSettingsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Настройки уведомлений'),
         backgroundColor: Colors.white,
-        foregroundColor: Colors.black87,
         elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.pop(context),
+        ),
+        title: const Text(
+          'Настройки уведомлений',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         centerTitle: true,
       ),
       body: BlocBuilder<NotificationSettingsCubit, List<NotificationSetting>>(
@@ -24,25 +36,64 @@ class NotificationSettingsScreen extends StatelessWidget {
             return const Center(child: CircularProgressIndicator());
           }
 
-          // Группировка как на скриншоте (индексы: 0=all, 1-3=траты, 4-6=комнаты, 7=системные)
           return ListView(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16),
             children: [
-              _buildMasterSwitch(context, settings[0]),
-              const SizedBox(height: 24),
-              _buildSection(
-                'Уведомления о тратах',
-                settings.sublist(1, 4),
-                context,
+              // СИНЯЯ КАРТОЧКА "Включить все уведомления"
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  // ignore: deprecated_member_use
+                  color: ColorCollection.primary.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.notifications_active,
+                      color: ColorCollection.primary,
+                    ),
+                    const SizedBox(width: 12),
+                    const Expanded(
+                      child: Text(
+                        'Включить все уведомления',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    Switch(
+                      value: settings[0].isEnabled,
+                      onChanged: (_) => context
+                          .read<NotificationSettingsCubit>()
+                          .toggleSetting('all'),
+                      activeThumbColor: ColorCollection.primary,
+                    ),
+                  ],
+                ),
               ),
-              const SizedBox(height: 24),
-              _buildSection(
-                'Уведомления о комнатах',
-                settings.sublist(4, 7),
-                context,
-              ),
-              const SizedBox(height: 24),
-              _buildSection('Системные и баланс', settings.sublist(7), context),
+
+              const SizedBox(height: 32),
+
+              // Уведомления о тратах
+              _buildSectionTitle('Уведомления о тратах'),
+              const SizedBox(height: 12),
+              ...settings.sublist(1, 4).map((s) => _buildTile(s, context)),
+
+              const SizedBox(height: 32),
+
+              // Уведомления о комнатах
+              _buildSectionTitle('Уведомления о комнатах'),
+              const SizedBox(height: 12),
+              ...settings.sublist(4, 7).map((s) => _buildTile(s, context)),
+
+              const SizedBox(height: 32),
+
+              // Системные
+              _buildSectionTitle('Системные и баланс'),
+              const SizedBox(height: 12),
+              ...settings.sublist(7).map((s) => _buildTile(s, context)),
             ],
           );
         },
@@ -50,107 +101,45 @@ class NotificationSettingsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildMasterSwitch(BuildContext context, NotificationSetting setting) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        // ignore: deprecated_member_use
-        color: ColorCollection.primary.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Row(
-        children: [
-          Icon(
-            Icons.notifications_active_outlined,
-            color: ColorCollection.primary,
-            size: 24,
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Text(
-              setting.title,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-          ),
-          Switch(
-            value: setting.isEnabled,
-            onChanged: (_) => context
-                .read<NotificationSettingsCubit>()
-                .toggleSetting(setting.id),
-            activeThumbColor: ColorCollection.primary,
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          ),
-        ],
+  Widget _buildSectionTitle(String title) {
+    return Text(
+      title,
+      style: const TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+        color: Colors.black87,
       ),
     );
   }
 
-  Widget _buildSection(
-    String title,
-    List<NotificationSetting> items,
-    BuildContext context,
-  ) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.black87,
-          ),
-        ),
-        const SizedBox(height: 12),
-        ...items.map((setting) => _buildSettingTile(setting, context)),
-      ],
-    );
-  }
-
-  Widget _buildSettingTile(NotificationSetting setting, BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 8),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 0, vertical: 4),
-        leading: Icon(
-          _getIconForSetting(setting.id),
-          color: Colors.grey[600],
-          size: 24,
-        ),
-        title: Text(setting.title, style: const TextStyle(fontSize: 16)),
-        subtitle: setting.subtitle != null
-            ? Text(
-                setting.subtitle!,
-                style: TextStyle(fontSize: 14, color: Colors.grey[500]),
-              )
-            : null,
-        trailing: Switch(
-          value: setting.isEnabled,
-          onChanged: (_) => context
-              .read<NotificationSettingsCubit>()
-              .toggleSetting(setting.id),
-          activeThumbColor: ColorCollection.primary,
-          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        ),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-        tileColor: Colors.grey[50],
-      ),
-    );
-  }
-
-  IconData _getIconForSetting(String id) {
-    switch (id) {
+  Widget _buildTile(NotificationSetting setting, BuildContext context) {
+    IconData icon;
+    switch (setting.id) {
       case 'trap_limit_exceeded':
       case 'balance_updated':
-        return Icons.warning_amber_outlined;
+        icon = Icons.warning_amber;
+        break;
       case 'general_announcements':
-        return Icons.campaign_outlined;
-      case 'new_arrival_room':
-      case 'new_invite_room':
-        return Icons.group_outlined;
+        icon = Icons.campaign;
+        break;
       default:
-        return Icons.notifications_outlined;
+        icon = Icons.circle_notifications;
     }
+
+    return SwitchListTile(
+      secondary: Icon(icon, color: Colors.grey[700]),
+      title: Text(setting.title),
+      subtitle: setting.subtitle != null
+          ? Text(
+              setting.subtitle!,
+              style: TextStyle(color: Colors.grey[600], fontSize: 13),
+            )
+          : null,
+      value: setting.isEnabled,
+      activeThumbColor: ColorCollection.primary,
+      onChanged: (_) =>
+          context.read<NotificationSettingsCubit>().toggleSetting(setting.id),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 4),
+    );
   }
 }

@@ -103,7 +103,8 @@ class BottomNavBar extends StatelessWidget {
       case "Аналитика":
         route = AppRoutes.analitics;
         break;
-      case "Карты":
+      case "Комната":
+        route = AppRoutes.room;
         return;
       case "Профиль":
         route = AppRoutes.profile;

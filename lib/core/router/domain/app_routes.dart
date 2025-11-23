@@ -8,4 +8,6 @@ abstract class AppRoutes {
   static const analitics = '/analitics';
   static const addNote = '/add-note';
   static const notificationSettings = '/notification-settings';
+  static const receiptScanner = '/receipt-scanner';
+  static const room = '/room';
 }
