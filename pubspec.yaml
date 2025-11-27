@@ -58,6 +58,9 @@ dependencies:
   google_mlkit_text_recognition: ^0.15.0
   equatable: ^2.0.7
   share_plus: ^12.0.1
+  clipboard: ^2.0.2
+  permission_handler: ^12.0.1
+  flutter_contacts: ^1.1.9+2
 
 dev_dependencies:
   flutter_test:

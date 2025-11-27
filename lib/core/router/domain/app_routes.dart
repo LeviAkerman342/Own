@@ -10,4 +10,5 @@ abstract class AppRoutes {
   static const notificationSettings = '/notification-settings';
   static const receiptScanner = '/receipt-scanner';
   static const room = '/room';
+  static const invite = '/invite';
 }

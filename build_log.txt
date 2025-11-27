@@ -1,0 +1,641 @@
+[  +29 ms] executing: uname -m
+[   +5 ms] Exit code 0 from: uname -m
+[        ] x86_64
+[   +7 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[  +16 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +28 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[  +78 ms] executing: [/home/user/myapp/] /home/user/flutter/bin/cache/dart-sdk/bin/dart pub --suppress-analytics --directory . get --example
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 67.0.0 (92.0.0 available)
+  _flutterfire_internals 1.3.63 (1.3.64 available)
+  analyzer 6.4.1 (9.0.0 available)
+  build 2.4.1 (4.0.3 available)
+  build_config 1.1.2 (1.2.0 available)
+  build_daemon 4.1.0 (4.1.1 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.10.4 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  built_value 8.12.0 (8.12.1 available)
+  camera_android_camerax 0.6.24+2 (0.6.24+3 available)
+  characters 1.4.0 (1.4.1 available)
+  cloud_firestore 6.0.3 (6.1.0 available)
+  cloud_firestore_platform_interface 7.0.3 (7.0.4 available)
+  cloud_firestore_web 5.0.3 (5.1.0 available)
+  cross_file 0.3.4+2 (0.3.5+1 available)
+  crypto 3.0.6 (3.0.7 available)
+  dart_style 2.3.6 (3.1.3 available)
+  file_selector_linux 0.9.3+2 (0.9.4 available)
+  file_selector_macos 0.9.4+5 (0.9.5 available)
+  file_selector_platform_interface 2.6.2 (2.7.0 available)
+  file_selector_windows 0.9.3+4 (0.9.3+5 available)
+  firebase_auth 6.1.1 (6.1.2 available)
+  firebase_auth_platform_interface 8.1.3 (8.1.4 available)
+  firebase_auth_web 6.0.4 (6.1.0 available)
+  firebase_core 4.2.0 (4.2.1 available)
+  firebase_core_web 3.2.0 (3.3.0 available)
+  firebase_storage 13.0.3 (13.0.4 available)
+  firebase_storage_platform_interface 5.2.14 (5.2.15 available)
+  firebase_storage_web 3.10.21 (3.11.0 available)
+  flutter_lints 5.0.0 (6.0.0 available)
+  flutter_plugin_android_lifecycle 2.0.32 (2.0.33 available)
+  go_router 16.2.5 (17.0.0 available)
+  http 1.5.0 (1.6.0 available)
+  image_picker 1.2.0 (1.2.1 available)
+  image_picker_android 0.8.13+5 (0.8.13+10 available)
+  image_picker_for_web 3.1.0 (3.1.1 available)
+  image_picker_ios 0.8.13+1 (0.8.13+2 available)
+  image_picker_platform_interface 2.11.0 (2.11.1 available)
+  lints 5.1.1 (6.0.0 available)
+  matcher 0.12.17 (0.12.18 available)
+  material_color_utilities 0.11.1 (0.13.0 available)
+  meta 1.16.0 (1.17.0 available)
+  path_provider_android 2.2.20 (2.2.22 available)
+  path_provider_foundation 2.4.3 (2.4.4 available)
+  shared_preferences_android 2.4.15 (2.4.17 available)
+  shared_preferences_foundation 2.5.5 (2.5.6 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.1.1 available)
+  source_helper 1.3.5 (1.3.9 available)
+  test 1.26.2 (1.28.0 available)
+  test_api 0.7.6 (0.7.8 available)
+  test_core 0.6.11 (0.6.14 available)
+Got dependencies!
+53 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+[+4276 ms] Found plugin shared_preferences at /home/user/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/
+[   +5 ms] Found plugin shared_preferences_windows at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1/
+[   +4 ms] Found plugin path_provider_windows at /home/user/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[   +3 ms] Found plugin shared_preferences_web at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.3/
+[   +2 ms] Found plugin shared_preferences_linux at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1/
+[   +5 ms] Found plugin path_provider_linux at /home/user/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+[   +1 ms] Found plugin shared_preferences_foundation at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.5/
+[   +2 ms] Found plugin shared_preferences_android at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.15/
+[   +1 ms] Found plugin share_plus at /home/user/.pub-cache/hosted/pub.dev/share_plus-12.0.1/
+[   +2 ms] Found plugin url_launcher_windows at /home/user/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.5/
+[   +2 ms] Found plugin url_launcher_web at /home/user/.pub-cache/hosted/pub.dev/url_launcher_web-2.4.1/
+[   +1 ms] Found plugin url_launcher_linux at /home/user/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.2/
+[   +2 ms] Found plugin path_provider at /home/user/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+[   +1 ms] Found plugin path_provider_foundation at /home/user/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.3/
+[   +1 ms] Found plugin path_provider_android at /home/user/.pub-cache/hosted/pub.dev/path_provider_android-2.2.20/
+[   +2 ms] Found plugin permission_handler at /home/user/.pub-cache/hosted/pub.dev/permission_handler-12.0.1/
+[   +2 ms] Found plugin permission_handler_windows at /home/user/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1/
+[   +6 ms] Found plugin permission_handler_html at /home/user/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.3+5/
+[   +1 ms] Found plugin permission_handler_apple at /home/user/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.7/
+[   +2 ms] Found plugin permission_handler_android at /home/user/.pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/
+[   +3 ms] Found plugin image_picker at /home/user/.pub-cache/hosted/pub.dev/image_picker-1.2.0/
+[   +1 ms] Found plugin image_picker_windows at /home/user/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.2/
+[   +2 ms] Found plugin file_selector_windows at /home/user/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+4/
+[   +1 ms] Found plugin image_picker_macos at /home/user/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.2+1/
+[   +1 ms] Found plugin file_selector_macos at /home/user/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+5/
+[   +1 ms] Found plugin image_picker_linux at /home/user/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.2/
+[   +2 ms] Found plugin file_selector_linux at /home/user/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2/
+[   +1 ms] Found plugin image_picker_ios at /home/user/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.13+1/
+[   +1 ms] Found plugin image_picker_for_web at /home/user/.pub-cache/hosted/pub.dev/image_picker_for_web-3.1.0/
+[   +1 ms] Found plugin image_picker_android at /home/user/.pub-cache/hosted/pub.dev/image_picker_android-0.8.13+5/
+[   +2 ms] Found plugin flutter_plugin_android_lifecycle at /home/user/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.32/
+[   +2 ms] Found plugin google_mlkit_text_recognition at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.15.0/
+[   +1 ms] Found plugin google_mlkit_commons at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.11.0/
+[  +14 ms] Found plugin flutter_contacts at /home/user/.pub-cache/hosted/pub.dev/flutter_contacts-1.1.9+2/
+[  +11 ms] Found plugin firebase_storage at /home/user/.pub-cache/hosted/pub.dev/firebase_storage-13.0.3/
+[   +1 ms] Found plugin firebase_storage_web at /home/user/.pub-cache/hosted/pub.dev/firebase_storage_web-3.10.21/
+[   +2 ms] Found plugin firebase_core at /home/user/.pub-cache/hosted/pub.dev/firebase_core-4.2.0/
+[   +1 ms] Found plugin firebase_core_web at /home/user/.pub-cache/hosted/pub.dev/firebase_core_web-3.2.0/
+[   +2 ms] Found plugin firebase_auth at /home/user/.pub-cache/hosted/pub.dev/firebase_auth-6.1.1/
+[   +1 ms] Found plugin firebase_auth_web at /home/user/.pub-cache/hosted/pub.dev/firebase_auth_web-6.0.4/
+[   +3 ms] Found plugin cloud_firestore at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore-6.0.3/
+[   +1 ms] Found plugin cloud_firestore_web at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore_web-5.0.3/
+[   +2 ms] Found plugin camera at /home/user/.pub-cache/hosted/pub.dev/camera-0.11.3/
+[   +1 ms] Found plugin camera_web at /home/user/.pub-cache/hosted/pub.dev/camera_web-0.3.5+1/
+[   +1 ms] Found plugin camera_avfoundation at /home/user/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.22+6/
+[   +1 ms] Found plugin camera_android_camerax at /home/user/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.24+2/
+[  +85 ms] Found plugin shared_preferences at /home/user/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/
+[   +1 ms] Found plugin shared_preferences_windows at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1/
+[   +2 ms] Found plugin path_provider_windows at /home/user/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[   +2 ms] Found plugin shared_preferences_web at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.3/
+[   +1 ms] Found plugin shared_preferences_linux at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1/
+[        ] Found plugin path_provider_linux at /home/user/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+[   +1 ms] Found plugin shared_preferences_foundation at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.5/
+[        ] Found plugin shared_preferences_android at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.15/
+[        ] Found plugin share_plus at /home/user/.pub-cache/hosted/pub.dev/share_plus-12.0.1/
+[   +1 ms] Found plugin url_launcher_windows at /home/user/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.5/
+[   +1 ms] Found plugin url_launcher_web at /home/user/.pub-cache/hosted/pub.dev/url_launcher_web-2.4.1/
+[        ] Found plugin url_launcher_linux at /home/user/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.2/
+[   +1 ms] Found plugin path_provider at /home/user/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+[        ] Found plugin path_provider_foundation at /home/user/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.3/
+[        ] Found plugin path_provider_android at /home/user/.pub-cache/hosted/pub.dev/path_provider_android-2.2.20/
+[   +1 ms] Found plugin permission_handler at /home/user/.pub-cache/hosted/pub.dev/permission_handler-12.0.1/
+[        ] Found plugin permission_handler_windows at /home/user/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1/
+[   +1 ms] Found plugin permission_handler_html at /home/user/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.3+5/
+[        ] Found plugin permission_handler_apple at /home/user/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.7/
+[        ] Found plugin permission_handler_android at /home/user/.pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/
+[   +1 ms] Found plugin image_picker at /home/user/.pub-cache/hosted/pub.dev/image_picker-1.2.0/
+[        ] Found plugin image_picker_windows at /home/user/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.2/
+[   +2 ms] Found plugin file_selector_windows at /home/user/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+4/
+[   +1 ms] Found plugin image_picker_macos at /home/user/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.2+1/
+[        ] Found plugin file_selector_macos at /home/user/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+5/
+[        ] Found plugin image_picker_linux at /home/user/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.2/
+[        ] Found plugin file_selector_linux at /home/user/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2/
+[        ] Found plugin image_picker_ios at /home/user/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.13+1/
+[        ] Found plugin image_picker_for_web at /home/user/.pub-cache/hosted/pub.dev/image_picker_for_web-3.1.0/
+[   +3 ms] Found plugin image_picker_android at /home/user/.pub-cache/hosted/pub.dev/image_picker_android-0.8.13+5/
+[   +4 ms] Found plugin flutter_plugin_android_lifecycle at /home/user/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.32/
+[   +1 ms] Found plugin google_mlkit_text_recognition at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.15.0/
+[        ] Found plugin google_mlkit_commons at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.11.0/
+[  +15 ms] Found plugin flutter_contacts at /home/user/.pub-cache/hosted/pub.dev/flutter_contacts-1.1.9+2/
+[  +10 ms] Found plugin firebase_storage at /home/user/.pub-cache/hosted/pub.dev/firebase_storage-13.0.3/
+[        ] Found plugin firebase_storage_web at /home/user/.pub-cache/hosted/pub.dev/firebase_storage_web-3.10.21/
+[   +1 ms] Found plugin firebase_core at /home/user/.pub-cache/hosted/pub.dev/firebase_core-4.2.0/
+[   +1 ms] Found plugin firebase_core_web at /home/user/.pub-cache/hosted/pub.dev/firebase_core_web-3.2.0/
+[   +2 ms] Found plugin firebase_auth at /home/user/.pub-cache/hosted/pub.dev/firebase_auth-6.1.1/
+[   +1 ms] Found plugin firebase_auth_web at /home/user/.pub-cache/hosted/pub.dev/firebase_auth_web-6.0.4/
+[   +3 ms] Found plugin cloud_firestore at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore-6.0.3/
+[   +1 ms] Found plugin cloud_firestore_web at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore_web-5.0.3/
+[   +1 ms] Found plugin camera at /home/user/.pub-cache/hosted/pub.dev/camera-0.11.3/
+[        ] Found plugin camera_web at /home/user/.pub-cache/hosted/pub.dev/camera_web-0.3.5+1/
+[   +1 ms] Found plugin camera_avfoundation at /home/user/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.22+6/
+[        ] Found plugin camera_android_camerax at /home/user/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.24+2/
+[  +59 ms] Found plugin shared_preferences at /home/user/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/
+[        ] Found plugin shared_preferences_windows at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1/
+[   +1 ms] Found plugin path_provider_windows at /home/user/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[   +2 ms] Found plugin shared_preferences_web at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.3/
+[   +1 ms] Found plugin shared_preferences_linux at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1/
+[        ] Found plugin path_provider_linux at /home/user/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+[   +1 ms] Found plugin shared_preferences_foundation at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.5/
+[        ] Found plugin shared_preferences_android at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.15/
+[        ] Found plugin share_plus at /home/user/.pub-cache/hosted/pub.dev/share_plus-12.0.1/
+[   +1 ms] Found plugin url_launcher_windows at /home/user/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.5/
+[   +1 ms] Found plugin url_launcher_web at /home/user/.pub-cache/hosted/pub.dev/url_launcher_web-2.4.1/
+[   +1 ms] Found plugin url_launcher_linux at /home/user/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.2/
+[   +1 ms] Found plugin path_provider at /home/user/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+[   +1 ms] Found plugin path_provider_foundation at /home/user/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.3/
+[        ] Found plugin path_provider_android at /home/user/.pub-cache/hosted/pub.dev/path_provider_android-2.2.20/
+[   +1 ms] Found plugin permission_handler at /home/user/.pub-cache/hosted/pub.dev/permission_handler-12.0.1/
+[        ] Found plugin permission_handler_windows at /home/user/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1/
+[   +3 ms] Found plugin permission_handler_html at /home/user/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.3+5/
+[        ] Found plugin permission_handler_apple at /home/user/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.7/
+[        ] Found plugin permission_handler_android at /home/user/.pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/
+[   +1 ms] Found plugin image_picker at /home/user/.pub-cache/hosted/pub.dev/image_picker-1.2.0/
+[        ] Found plugin image_picker_windows at /home/user/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.2/
+[   +1 ms] Found plugin file_selector_windows at /home/user/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+4/
+[   +1 ms] Found plugin image_picker_macos at /home/user/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.2+1/
+[        ] Found plugin file_selector_macos at /home/user/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+5/
+[        ] Found plugin image_picker_linux at /home/user/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.2/
+[   +1 ms] Found plugin file_selector_linux at /home/user/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2/
+[        ] Found plugin image_picker_ios at /home/user/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.13+1/
+[   +1 ms] Found plugin image_picker_for_web at /home/user/.pub-cache/hosted/pub.dev/image_picker_for_web-3.1.0/
+[        ] Found plugin image_picker_android at /home/user/.pub-cache/hosted/pub.dev/image_picker_android-0.8.13+5/
+[        ] Found plugin flutter_plugin_android_lifecycle at /home/user/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.32/
+[   +1 ms] Found plugin google_mlkit_text_recognition at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.15.0/
+[        ] Found plugin google_mlkit_commons at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.11.0/
+[   +7 ms] Found plugin flutter_contacts at /home/user/.pub-cache/hosted/pub.dev/flutter_contacts-1.1.9+2/
+[   +5 ms] Found plugin firebase_storage at /home/user/.pub-cache/hosted/pub.dev/firebase_storage-13.0.3/
+[        ] Found plugin firebase_storage_web at /home/user/.pub-cache/hosted/pub.dev/firebase_storage_web-3.10.21/
+[   +1 ms] Found plugin firebase_core at /home/user/.pub-cache/hosted/pub.dev/firebase_core-4.2.0/
+[        ] Found plugin firebase_core_web at /home/user/.pub-cache/hosted/pub.dev/firebase_core_web-3.2.0/
+[   +1 ms] Found plugin firebase_auth at /home/user/.pub-cache/hosted/pub.dev/firebase_auth-6.1.1/
+[        ] Found plugin firebase_auth_web at /home/user/.pub-cache/hosted/pub.dev/firebase_auth_web-6.0.4/
+[   +3 ms] Found plugin cloud_firestore at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore-6.0.3/
+[        ] Found plugin cloud_firestore_web at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore_web-5.0.3/
+[   +1 ms] Found plugin camera at /home/user/.pub-cache/hosted/pub.dev/camera-0.11.3/
+[        ] Found plugin camera_web at /home/user/.pub-cache/hosted/pub.dev/camera_web-0.3.5+1/
+[   +1 ms] Found plugin camera_avfoundation at /home/user/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.22+6/
+[        ] Found plugin camera_android_camerax at /home/user/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.24+2/
+[   +5 ms] Generating /home/user/myapp/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+[   +2 ms] Skipping generating GeneratedPluginRegistrant.java because it is up-to-date.
+[  +60 ms] Top-level Gradle build file not found, skipping migration of task "clean".
+[        ] Android Studio version could not be detected, skipping Gradle-Java version compatibility check.
+[   +5 ms] CMake project not found, skipping support Android 15 16k page size migration.
+[   +8 ms] Using gradle from /home/user/myapp/android/gradlew.
+[  +51 ms] LocalFile: '/home/user/myapp/android/build.gradle.kts' doesn't provide an AGP version. Checking settings.
+[  +14 ms] LocalFile: '/home/user/myapp/android/settings.gradle.kts' provides AGP version: 8.9.1
+[  +22 ms] Running Gradle task 'assembleRelease'...
+[   +1 ms] executing: [/home/user/myapp/android/] /home/user/myapp/android/gradlew --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm,android-arm64,android-x64 -Ptarget=lib/main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9WRVJTSU9OPTMuMzUuMg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049MDVkYjk2ODkwOA==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049YThiZmRmYzM5NA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My45LjA= -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=true assembleRelease
+[ +450 ms] Initialized native services in: /home/user/.gradle/native
+[        ] Initialized jansi services in: /home/user/.gradle/native
+[ +199 ms] Found daemon DaemonInfo{pid=647, address=[31f91a50-568e-4220-846d-baecce463942 port:36397, addresses:[/127.0.0.1]], state=Idle, lastBusy=1759958985980, context=DefaultDaemonContext[uid=dd26d03c-2cf7-43d3-a423-1490c9f7fc31,javaHome=/nix/store/x0a3pj8nmg4ijssmi8wyyd30v4fhycp7-openjdk-17.0.15+6/lib/openjdk,javaVersion=17,javaVendor=N/A,daemonRegistryDir=/home/user/.gradle/daemon,pid=647,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=4G,-XX:ReservedCodeCacheSize=512m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx8G,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+[        ] JVM is incompatible.
+[        ] Wanted: DaemonRequestContext{jvmCriteria=/nix/store/vpdmpgah6rzaja7d3c8va1yfdks75bqq-openjdk-21.0.3+9/lib/openjdk (no JDK specified, using current Java home), daemonOpts=[-XX:MaxMetaspaceSize=4G, -XX:ReservedCodeCacheSize=512m, -XX:+HeapDumpOnOutOfMemoryError, -Xmx8G, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+[   +1 ms] Actual: DefaultDaemonContext[uid=dd26d03c-2cf7-43d3-a423-1490c9f7fc31,javaHome=/nix/store/x0a3pj8nmg4ijssmi8wyyd30v4fhycp7-openjdk-17.0.15+6/lib/openjdk,javaVersion=17,javaVendor=N/A,daemonRegistryDir=/home/user/.gradle/daemon,pid=647,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=4G,-XX:ReservedCodeCacheSize=512m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx8G,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+[        ]   Looking for a different daemon...
+[        ] The client will now receive all logging from the daemon (pid: 1535). The daemon log file: /home/user/.gradle/daemon/8.12/daemon-1535.out.log
+[  +95 ms] Starting 3rd build in daemon [uptime: 10 mins 54.165 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 8 GiB, non-heap usage: 4% of 4 GiB]
+[   +1 ms] Using 8 worker leases.
+[        ] Not watching /home/user/myapp/android since the file system is not supported
+[        ] Watching the file system is configured to be enabled if available
+[        ] File system watching is active
+[        ] Starting Build
+[        ] Not watching /home/user/flutter/packages/flutter_tools/gradle since the file system is not supported
+[        ] Using local directory build cache for build ':gradle' (location = /home/user/.gradle/caches/build-cache-1, remove unused entries = after 7 days).
+[        ] > Configure project :gradle
+[        ] Evaluating project ':gradle' using build file '/home/user/flutter/packages/flutter_tools/gradle/build.gradle.kts'.
+[        ] Resolved plugin [id: 'org.gradle.java-gradle-plugin']
+[        ] Resolved plugin [id: 'org.gradle.groovy']
+[        ] Resolved plugin [id: 'org.gradle.kotlin.kotlin-dsl', version: '5.1.2']
+[        ] Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '1.9.20']
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[        ] kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+[        ] kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+[        ] file or directory '/home/user/flutter/packages/flutter_tools/gradle/src/main/java', not found
+[        ] Resolved plugin [id: 'dev.flutter.flutter-plugin-loader', version: '1.0.0']
+[        ] Resolved plugin [id: 'com.android.application', version: '8.9.1', apply: false]
+[        ] Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.1.0', apply: false]
+[  +95 ms] Resolve mutations for :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#424,Execution worker,5,main]) started.
+[        ] :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+[        ] Skipping task ':gradle:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+[        ] Resolve mutations for :gradle:compileKotlin (Thread[#424,Execution worker,5,main]) started.
+[        ] :gradle:compileKotlin (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:compileKotlin UP-TO-DATE
+[        ] Build cache key for task ':gradle:compileKotlin' is cb76b7115cca495582a4849fa192a13a
+[        ] Skipping task ':gradle:compileKotlin' as it is up-to-date.
+[        ] Resolve mutations for :gradle:compileJava (Thread[#424,Execution worker,5,main]) started.
+[        ] :gradle:compileJava (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:compileJava NO-SOURCE
+[        ] Skipping task ':gradle:compileJava' as it has no source files and no previous output files.
+[        ] Resolve mutations for :gradle:compileGroovy (Thread[#424,Execution worker,5,main]) started.
+[        ] :gradle:compileGroovy (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:compileGroovy NO-SOURCE
+[        ] Skipping task ':gradle:compileGroovy' as it has no source files and no previous output files.
+[        ] Resolve mutations for :gradle:pluginDescriptors (Thread[#424,Execution worker,5,main]) started.
+[   +1 ms] :gradle:pluginDescriptors (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:pluginDescriptors UP-TO-DATE
+[        ] Caching disabled for task ':gradle:pluginDescriptors' because:
+[        ]   Not worth caching
+[        ] Skipping task ':gradle:pluginDescriptors' as it is up-to-date.
+[   +1 ms] Resolve mutations for :gradle:processResources (Thread[#424,Execution worker,5,main]) started.
+[        ] :gradle:processResources (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:processResources UP-TO-DATE
+[        ] Caching disabled for task ':gradle:processResources' because:
+[        ]   Not worth caching
+[        ] Skipping task ':gradle:processResources' as it is up-to-date.
+[        ] Resolve mutations for :gradle:classes (Thread[#424,Execution worker,5,main]) started.
+[        ] :gradle:classes (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:classes UP-TO-DATE
+[        ] Skipping task ':gradle:classes' as it has no actions.
+[        ] Resolve mutations for :gradle:jar (Thread[#424,Execution worker,5,main]) started.
+[        ] :gradle:jar (Thread[#424,Execution worker,5,main]) started.
+[        ] > Task :gradle:jar UP-TO-DATE
+[        ] Caching disabled for task ':gradle:jar' because:
+[        ]   Not worth caching
+[        ] Skipping task ':gradle:jar' as it is up-to-date.
+[        ] Settings evaluated using settings file '/home/user/myapp/android/settings.gradle.kts'.
+[        ] Using local directory build cache for the root build (location = /home/user/.gradle/caches/build-cache-1, remove unused entries = after 7 days).
+[  +89 ms] Projects loaded. Root project using build file '/home/user/myapp/android/build.gradle.kts'.
+[        ] Included projects: [root project 'android', project ':app', project ':camera_android_camerax', project ':cloud_firestore', project ':firebase_auth', project ':firebase_core', project ':firebase_storage', project ':flutter_contacts', project ':flutter_plugin_android_lifecycle', project ':google_mlkit_commons', project ':google_mlkit_text_recognition', project ':image_picker_android', project ':path_provider_android', project ':permission_handler_android', project ':share_plus', project ':shared_preferences_android']
+[  +99 ms] > Configure project :app
+[        ] Evaluating project ':app' using build file '/home/user/myapp/android/app/build.gradle.kts'.
+[        ] Resolved plugin [id: 'com.android.application']
+[        ] Resolved plugin [id: 'kotlin-android']
+[        ] Resolved plugin [id: 'dev.flutter.flutter-gradle-plugin']
+[        ] Using default execution profile
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[   +3 ms] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +1 ms] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[   +1 ms] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +2 ms] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[   +3 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is /home/user/.androidsdkroot
+[        ] > Configure project :
+[        ] Evaluating root project 'android' using build file '/home/user/myapp/android/build.gradle.kts'.
+[  +74 ms] > Configure project :camera_android_camerax
+[        ] Evaluating project ':camera_android_camerax' using build file '/home/user/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.24+2/android/build.gradle'.
+[        ] Using default execution profile
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[  +98 ms] > Configure project :cloud_firestore
+[   +1 ms] Evaluating project ':cloud_firestore' using build file '/home/user/.pub-cache/hosted/pub.dev/cloud_firestore-6.0.3/android/build.gradle'.
+[        ] Using default execution profile
+[        ] > Configure project :firebase_auth
+[        ] Evaluating project ':firebase_auth' using build file '/home/user/.pub-cache/hosted/pub.dev/firebase_auth-6.1.1/android/build.gradle'.
+[        ] Using default execution profile
+[  +98 ms] > Configure project :firebase_core
+[        ] Evaluating project ':firebase_core' using build file '/home/user/.pub-cache/hosted/pub.dev/firebase_core-4.2.0/android/build.gradle'.
+[        ] Using default execution profile
+[        ] > Configure project :firebase_storage
+[        ] Evaluating project ':firebase_storage' using build file '/home/user/.pub-cache/hosted/pub.dev/firebase_storage-13.0.3/android/build.gradle'.
+[        ] Using default execution profile
+[  +98 ms] > Configure project :flutter_contacts
+[        ] Evaluating project ':flutter_contacts' using build file '/home/user/.pub-cache/hosted/pub.dev/flutter_contacts-1.1.9+2/android/build.gradle'.
+[        ] Using default execution profile
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[        ] > Configure project :flutter_plugin_android_lifecycle
+[        ] Evaluating project ':flutter_plugin_android_lifecycle' using build file '/home/user/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.32/android/build.gradle'.
+[        ] Using default execution profile
+[  +98 ms] > Configure project :google_mlkit_commons
+[        ] Evaluating project ':google_mlkit_commons' using build file '/home/user/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.11.0/android/build.gradle'.
+[        ] Using default execution profile
+[   +1 ms] > Configure project :google_mlkit_text_recognition
+[        ] Evaluating project ':google_mlkit_text_recognition' using build file '/home/user/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.15.0/android/build.gradle'.
+[        ] Using default execution profile
+[  +97 ms] > Configure project :image_picker_android
+[        ] Evaluating project ':image_picker_android' using build file '/home/user/.pub-cache/hosted/pub.dev/image_picker_android-0.8.13+5/android/build.gradle'.
+[        ] Using default execution profile
+[        ] > Configure project :path_provider_android
+[        ] Evaluating project ':path_provider_android' using build file '/home/user/.pub-cache/hosted/pub.dev/path_provider_android-2.2.20/android/build.gradle'.
+[        ] Using default execution profile
+[  +99 ms] > Configure project :permission_handler_android
+[        ] Evaluating project ':permission_handler_android' using build file '/home/user/.pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/android/build.gradle'.
+[        ] Using default execution profile
+[        ] > Configure project :share_plus
+[        ] Evaluating project ':share_plus' using build file '/home/user/.pub-cache/hosted/pub.dev/share_plus-12.0.1/android/build.gradle'.
+[        ] Using default execution profile
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[  +98 ms] > Configure project :shared_preferences_android
+[        ] Evaluating project ':shared_preferences_android' using build file '/home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.15/android/build.gradle'.
+[        ] Using default execution profile
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[        ] All projects evaluated.
+[        ] Task name matched 'assembleRelease'
+[   +1 ms] Selected primary task 'assembleRelease' from project :
+[ +405 ms] Tasks to be executed: [task ':app:ReleaseMinSdkCheck', task ':app:compileFlutterBuildRelease', task ':app:packJniLibsflutterBuildRelease', task ':app:preBuild', task ':app:preReleaseBuild', task ':app:configureCMakeRelease[arm64-v8a]', task ':app:buildCMakeRelease[arm64-v8a]', task ':app:configureCMakeRelease[armeabi-v7a]', task ':app:buildCMakeRelease[armeabi-v7a]', task ':app:configureCMakeRelease[x86_64]', task ':app:buildCMakeRelease[x86_64]', task ':app:mergeReleaseJniLibFolders', task ':camera_android_camerax:preBuild', task ':camera_android_camerax:preReleaseBuild', task ':camera_android_camerax:mergeReleaseJniLibFolders', task ':camera_android_camerax:mergeReleaseNativeLibs', task ':camera_android_camerax:copyReleaseJniLibsProjectOnly', task ':cloud_firestore:preBuild', task ':cloud_firestore:preReleaseBuild', task ':cloud_firestore:mergeReleaseJniLibFolders', task ':cloud_firestore:mergeReleaseNativeLibs', task ':cloud_firestore:copyReleaseJniLibsProjectOnly', task ':firebase_auth:preBuild', task ':firebase_auth:preReleaseBuild', task ':firebase_auth:mergeReleaseJniLibFolders', task ':firebase_auth:mergeReleaseNativeLibs', task ':firebase_auth:copyReleaseJniLibsProjectOnly', task ':firebase_core:preBuild', task ':firebase_core:preReleaseBuild', task ':firebase_core:mergeReleaseJniLibFolders', task ':firebase_core:mergeReleaseNativeLibs', task ':firebase_core:copyReleaseJniLibsProjectOnly', task ':firebase_storage:preBuild', task ':firebase_storage:preReleaseBuild', task ':firebase_storage:mergeReleaseJniLibFolders', task ':firebase_storage:mergeReleaseNativeLibs', task ':firebase_storage:copyReleaseJniLibsProjectOnly', task ':flutter_contacts:preBuild', task ':flutter_contacts:preReleaseBuild', task ':flutter_contacts:mergeReleaseJniLibFolders', task ':flutter_contacts:mergeReleaseNativeLibs', task ':flutter_contacts:copyReleaseJniLibsProjectOnly', task ':flutter_plugin_android_lifecycle:preBuild', task ':flutter_plugin_android_lifecycle:preReleaseBuild', task ':flutter_plugin_android_lifecycle:mergeReleaseJniLibFolders', task ':flutter_plugin_android_lifecycle:mergeReleaseNativeLibs', task ':flutter_plugin_android_lifecycle:copyReleaseJniLibsProjectOnly', task ':google_mlkit_commons:preBuild', task ':google_mlkit_commons:preReleaseBuild', task ':google_mlkit_commons:mergeReleaseJniLibFolders', task ':google_mlkit_commons:mergeReleaseNativeLibs', task ':google_mlkit_commons:copyReleaseJniLibsProjectOnly', task ':google_mlkit_text_recognition:preBuild', task ':google_mlkit_text_recognition:preReleaseBuild', task ':google_mlkit_text_recognition:mergeReleaseJniLibFolders', task ':google_mlkit_text_recognition:mergeReleaseNativeLibs', task ':google_mlkit_text_recognition:copyReleaseJniLibsProjectOnly', task ':image_picker_android:preBuild', task ':image_picker_android:preReleaseBuild', task ':image_picker_android:mergeReleaseJniLibFolders', task ':image_picker_android:mergeReleaseNativeLibs', task ':image_picker_android:copyReleaseJniLibsProjectOnly', task ':path_provider_android:preBuild', task ':path_provider_android:preReleaseBuild', task ':path_provider_android:mergeReleaseJniLibFolders', task ':path_provider_android:mergeReleaseNativeLibs', task ':path_provider_android:copyReleaseJniLibsProjectOnly', task ':permission_handler_android:preBuild', task ':permission_handler_android:preReleaseBuild', task ':permission_handler_android:mergeReleaseJniLibFolders', task ':permission_handler_android:mergeReleaseNativeLibs', task ':permission_handler_android:copyReleaseJniLibsProjectOnly', task ':share_plus:preBuild', task ':share_plus:preReleaseBuild', task ':share_plus:mergeReleaseJniLibFolders', task ':share_plus:mergeReleaseNativeLibs', task ':share_plus:copyReleaseJniLibsProjectOnly', task ':shared_preferences_android:preBuild', task ':shared_preferences_android:preReleaseBuild', task ':shared_preferences_android:mergeReleaseJniLibFolders', task ':shared_preferences_android:mergeReleaseNativeLibs', task ':shared_preferences_android:copyReleaseJniLibsProjectOnly', task ':app:mergeReleaseNativeLibs', task ':app:stripReleaseDebugSymbols', task ':app:extractReleaseNativeSymbolTables', task ':app:mergeReleaseNativeDebugMetadata', task ':camera_android_camerax:checkKotlinGradlePluginConfigurationErrors', task ':camera_android_camerax:generateReleaseResValues', task ':camera_android_camerax:generateReleaseResources', task ':camera_android_camerax:packageReleaseResources', task ':camera_android_camerax:parseReleaseLocalResources', task ':camera_android_camerax:generateReleaseRFile', task ':camera_android_camerax:compileReleaseKotlin', task ':camera_android_camerax:javaPreCompileRelease', task ':camera_android_camerax:compileReleaseJavaWithJavac', task ':camera_android_camerax:mergeReleaseGeneratedProguardFiles', task ':camera_android_camerax:exportReleaseConsumerProguardFiles', task ':cloud_firestore:generateReleaseBuildConfig', task ':cloud_firestore:generateReleaseResValues', task ':cloud_firestore:generateReleaseResources', task ':cloud_firestore:packageReleaseResources', task ':cloud_firestore:parseReleaseLocalResources', task ':cloud_firestore:generateReleaseRFile', task ':cloud_firestore:javaPreCompileRelease', task ':firebase_core:generateReleaseBuildConfig', task ':firebase_core:generateReleaseResValues', task ':firebase_core:generateReleaseResources', task ':firebase_core:packageReleaseResources', task ':firebase_core:parseReleaseLocalResources', task ':firebase_core:generateReleaseRFile', task ':firebase_core:javaPreCompileRelease', task ':firebase_core:compileReleaseJavaWithJavac', task ':firebase_core:bundleLibCompileToJarRelease', task ':cloud_firestore:compileReleaseJavaWithJavac', task ':cloud_firestore:mergeReleaseGeneratedProguardFiles', task ':cloud_firestore:exportReleaseConsumerProguardFiles', task ':firebase_auth:generateReleaseBuildConfig', task ':firebase_auth:generateReleaseResValues', task ':firebase_auth:generateReleaseResources', task ':firebase_auth:packageReleaseResources', task ':firebase_auth:parseReleaseLocalResources', task ':firebase_auth:generateReleaseRFile', task ':firebase_auth:javaPreCompileRelease', task ':firebase_auth:compileReleaseJavaWithJavac', task ':firebase_auth:mergeReleaseGeneratedProguardFiles', task ':firebase_auth:exportReleaseConsumerProguardFiles', task ':firebase_storage:generateReleaseBuildConfig', task ':firebase_storage:generateReleaseResValues', task ':firebase_storage:generateReleaseResources', task ':firebase_storage:packageReleaseResources', task ':firebase_storage:parseReleaseLocalResources', task ':firebase_storage:generateReleaseRFile', task ':firebase_storage:javaPreCompileRelease', task ':firebase_storage:compileReleaseJavaWithJavac', task ':firebase_storage:mergeReleaseGeneratedProguardFiles', task ':firebase_storage:exportReleaseConsumerProguardFiles', task ':firebase_core:mergeReleaseGeneratedProguardFiles', task ':firebase_core:exportReleaseConsumerProguardFiles', task ':flutter_contacts:checkKotlinGradlePluginConfigurationErrors', task ':flutter_contacts:generateReleaseResValues', task ':flutter_contacts:generateReleaseResources', task ':flutter_contacts:packageReleaseResources', task ':flutter_contacts:parseReleaseLocalResources', task ':flutter_contacts:generateReleaseRFile', task ':flutter_contacts:compileReleaseKotlin', task ':flutter_contacts:javaPreCompileRelease', task ':flutter_contacts:compileReleaseJavaWithJavac', task ':flutter_contacts:mergeReleaseGeneratedProguardFiles', task ':flutter_contacts:exportReleaseConsumerProguardFiles', task ':flutter_plugin_android_lifecycle:generateReleaseResValues', task ':flutter_plugin_android_lifecycle:generateReleaseResources', task ':flutter_plugin_android_lifecycle:packageReleaseResources', task ':flutter_plugin_android_lifecycle:parseReleaseLocalResources', task ':flutter_plugin_android_lifecycle:generateReleaseRFile', task ':flutter_plugin_android_lifecycle:javaPreCompileRelease', task ':flutter_plugin_android_lifecycle:compileReleaseJavaWithJavac', task ':flutter_plugin_android_lifecycle:bundleLibCompileToJarRelease', task ':image_picker_android:generateReleaseResValues', task ':image_picker_android:generateReleaseResources', task ':image_picker_android:packageReleaseResources', task ':image_picker_android:parseReleaseLocalResources', task ':image_picker_android:generateReleaseRFile', task ':image_picker_android:javaPreCompileRelease', task ':image_picker_android:compileReleaseJavaWithJavac', task ':image_picker_android:mergeReleaseGeneratedProguardFiles', task ':image_picker_android:exportReleaseConsumerProguardFiles', task ':flutter_plugin_android_lifecycle:mergeReleaseGeneratedProguardFiles', task ':flutter_plugin_android_lifecycle:exportReleaseConsumerProguardFiles', task ':google_mlkit_commons:generateReleaseResValues', task ':google_mlkit_commons:generateReleaseResources', task ':google_mlkit_commons:packageReleaseResources', task ':google_mlkit_commons:parseReleaseLocalResources', task ':google_mlkit_commons:generateReleaseRFile', task ':google_mlkit_commons:javaPreCompileRelease', task ':google_mlkit_commons:compileReleaseJavaWithJavac', task ':google_mlkit_commons:bundleLibCompileToJarRelease', task ':google_mlkit_text_recognition:generateReleaseResValues', task ':google_mlkit_text_recognition:generateReleaseResources', task ':google_mlkit_text_recognition:packageReleaseResources', task ':google_mlkit_text_recognition:parseReleaseLocalResources', task ':google_mlkit_text_recognition:generateReleaseRFile', task ':google_mlkit_text_recognition:javaPreCompileRelease', task ':google_mlkit_text_recognition:compileReleaseJavaWithJavac', task ':google_mlkit_text_recognition:mergeReleaseGeneratedProguardFiles', task ':google_mlkit_text_recognition:exportReleaseConsumerProguardFiles', task ':google_mlkit_commons:mergeReleaseGeneratedProguardFiles', task ':google_mlkit_commons:exportReleaseConsumerProguardFiles', task ':path_provider_android:generateReleaseResValues', task ':path_provider_android:generateReleaseResources', task ':path_provider_android:packageReleaseResources', task ':path_provider_android:parseReleaseLocalResources', task ':path_provider_android:generateReleaseRFile', task ':path_provider_android:javaPreCompileRelease', task ':path_provider_android:compileReleaseJavaWithJavac', task ':path_provider_android:mergeReleaseGeneratedProguardFiles', task ':path_provider_android:exportReleaseConsumerProguardFiles', task ':permission_handler_android:generateReleaseResValues', task ':permission_handler_android:generateReleaseResources', task ':permission_handler_android:packageReleaseResources', task ':permission_handler_android:parseReleaseLocalResources', task ':permission_handler_android:generateReleaseRFile', task ':permission_handler_android:javaPreCompileRelease', task ':permission_handler_android:compileReleaseJavaWithJavac', task ':permission_handler_android:mergeReleaseGeneratedProguardFiles', task ':permission_handler_android:exportReleaseConsumerProguardFiles', task ':share_plus:checkKotlinGradlePluginConfigurationErrors', task ':share_plus:generateReleaseResValues', task ':share_plus:generateReleaseResources', task ':share_plus:packageReleaseResources', task ':share_plus:parseReleaseLocalResources', task ':share_plus:generateReleaseRFile', task ':share_plus:compileReleaseKotlin', task ':share_plus:javaPreCompileRelease', task ':share_plus:compileReleaseJavaWithJavac', task ':share_plus:mergeReleaseGeneratedProguardFiles', task ':share_plus:exportReleaseConsumerProguardFiles', task ':shared_preferences_android:checkKotlinGradlePluginConfigurationErrors', task ':shared_preferences_android:generateReleaseResValues', task ':shared_preferences_android:generateReleaseResources', task ':shared_preferences_android:packageReleaseResources', task ':shared_preferences_android:parseReleaseLocalResources', task ':shared_preferences_android:generateReleaseRFile', task ':shared_preferences_android:compileReleaseKotlin', task ':shared_preferences_android:javaPreCompileRelease', task ':shared_preferences_android:compileReleaseJavaWithJavac', task ':shared_preferences_android:mergeReleaseGeneratedProguardFiles', task ':shared_preferences_android:exportReleaseConsumerProguardFiles', task ':app:buildKotlinToolingMetadata', task ':app:checkReleaseDuplicateClasses', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':camera_android_camerax:writeReleaseAarMetadata', task ':cloud_firestore:writeReleaseAarMetadata', task ':firebase_auth:writeReleaseAarMetadata', task ':firebase_core:writeReleaseAarMetadata', task ':firebase_storage:writeReleaseAarMetadata', task ':flutter_contacts:writeReleaseAarMetadata', task ':flutter_plugin_android_lifecycle:writeReleaseAarMetadata', task ':google_mlkit_commons:writeReleaseAarMetadata', task ':google_mlkit_text_recognition:writeReleaseAarMetadata', task ':image_picker_android:writeReleaseAarMetadata', task ':path_provider_android:writeReleaseAarMetadata', task ':permission_handler_android:writeReleaseAarMetadata', task ':share_plus:writeReleaseAarMetadata', task ':shared_preferences_android:writeReleaseAarMetadata', task ':app:checkReleaseAarMetadata', task ':app:cleanMergeReleaseAssets', task ':app:mergeReleaseShaders', task ':app:compileReleaseShaders', task ':app:generateReleaseAssets', task ':camera_android_camerax:mergeReleaseShaders', task ':camera_android_camerax:compileReleaseShaders', task ':camera_android_camerax:generateReleaseAssets', task ':camera_android_camerax:mergeReleaseAssets', task ':cloud_firestore:mergeReleaseShaders', task ':cloud_firestore:compileReleaseShaders', task ':cloud_firestore:generateReleaseAssets', task ':cloud_firestore:mergeReleaseAssets', task ':firebase_auth:mergeReleaseShaders', task ':firebase_auth:compileReleaseShaders', task ':firebase_auth:generateReleaseAssets', task ':firebase_auth:mergeReleaseAssets', task ':firebase_core:mergeReleaseShaders', task ':firebase_core:compileReleaseShaders', task ':firebase_core:generateReleaseAssets', task ':firebase_core:mergeReleaseAssets', task ':firebase_storage:mergeReleaseShaders', task ':firebase_storage:compileReleaseShaders', task ':firebase_storage:generateReleaseAssets', task ':firebase_storage:mergeReleaseAssets', task ':flutter_contacts:mergeReleaseShaders', task ':flutter_contacts:compileReleaseShaders', task ':flutter_contacts:generateReleaseAssets', task ':flutter_contacts:mergeReleaseAssets', task ':flutter_plugin_android_lifecycle:mergeReleaseShaders', task ':flutter_plugin_android_lifecycle:compileReleaseShaders', task ':flutter_plugin_android_lifecycle:generateReleaseAssets', task ':flutter_plugin_android_lifecycle:mergeReleaseAssets', task ':google_mlkit_commons:mergeReleaseShaders', task ':google_mlkit_commons:compileReleaseShaders', task ':google_mlkit_commons:generateReleaseAssets', task ':google_mlkit_commons:mergeReleaseAssets', task ':google_mlkit_text_recognition:mergeReleaseShaders', task ':google_mlkit_text_recognition:compileReleaseShaders', task ':google_mlkit_text_recognition:generateReleaseAssets', task ':google_mlkit_text_recognition:mergeReleaseAssets', task ':image_picker_android:mergeReleaseShaders', task ':image_picker_android:compileReleaseShaders', task ':image_picker_android:generateReleaseAssets', task ':image_picker_android:mergeReleaseAssets', task ':path_provider_android:mergeReleaseShaders', task ':path_provider_android:compileReleaseShaders', task ':path_provider_android:generateReleaseAssets', task ':path_provider_android:mergeReleaseAssets', task ':permission_handler_android:mergeReleaseShaders', task ':permission_handler_android:compileReleaseShaders', task ':permission_handler_android:generateReleaseAssets', task ':permission_handler_android:mergeReleaseAssets', task ':share_plus:mergeReleaseShaders', task ':share_plus:compileReleaseShaders', task ':share_plus:generateReleaseAssets', task ':share_plus:mergeReleaseAssets', task ':shared_preferences_android:mergeReleaseShaders', task ':shared_preferences_android:compileReleaseShaders', task ':shared_preferences_android:generateReleaseAssets', task ':shared_preferences_android:mergeReleaseAssets', task ':app:mergeReleaseAssets', task ':app:copyFlutterAssetsRelease', task ':app:generateReleaseResValues', task ':app:mapReleaseSourceSetPaths', task ':app:generateReleaseResources', task ':app:mergeReleaseResources', task ':app:packageReleaseResources', task ':app:parseReleaseLocalResources', task ':app:createReleaseCompatibleScreenManifests', task ':app:extractDeepLinksRelease', task ':camera_android_camerax:extractDeepLinksRelease', task ':camera_android_camerax:processReleaseManifest', task ':cloud_firestore:extractDeepLinksRelease', task ':cloud_firestore:processReleaseManifest', task ':firebase_auth:extractDeepLinksRelease', task ':firebase_auth:processReleaseManifest', task ':firebase_core:extractDeepLinksRelease', task ':firebase_core:processReleaseManifest', task ':firebase_storage:extractDeepLinksRelease', task ':firebase_storage:processReleaseManifest', task ':flutter_contacts:extractDeepLinksRelease', task ':flutter_contacts:processReleaseManifest', task ':flutter_plugin_android_lifecycle:extractDeepLinksRelease', task ':flutter_plugin_android_lifecycle:processReleaseManifest', task ':google_mlkit_commons:extractDeepLinksRelease', task ':google_mlkit_commons:processReleaseManifest', task ':google_mlkit_text_recognition:extractDeepLinksRelease', task ':google_mlkit_text_recognition:processReleaseManifest', task ':image_picker_android:extractDeepLinksRelease', task ':image_picker_android:processReleaseManifest', task ':path_provider_android:extractDeepLinksRelease', task ':path_provider_android:processReleaseManifest', task ':permission_handler_android:extractDeepLinksRelease', task ':permission_handler_android:processReleaseManifest', task ':share_plus:extractDeepLinksRelease', task ':share_plus:processReleaseManifest', task ':shared_preferences_android:extractDeepLinksRelease', task ':shared_preferences_android:processReleaseManifest', task ':app:processReleaseMainManifest', task ':app:processReleaseManifest', task ':app:processReleaseManifestForPackage', task ':app:processReleaseResources', task ':camera_android_camerax:bundleLibCompileToJarRelease', task ':cloud_firestore:bundleLibCompileToJarRelease', task ':firebase_auth:bundleLibCompileToJarRelease', task ':firebase_storage:bundleLibCompileToJarRelease', task ':flutter_contacts:bundleLibCompileToJarRelease', task ':google_mlkit_text_recognition:bundleLibCompileToJarRelease', task ':image_picker_android:bundleLibCompileToJarRelease', task ':path_provider_android:bundleLibCompileToJarRelease', task ':permission_handler_android:bundleLibCompileToJarRelease', task ':share_plus:bundleLibCompileToJarRelease', task ':shared_preferences_android:bundleLibCompileToJarRelease', task ':app:compileReleaseKotlin', task ':app:javaPreCompileRelease', task ':app:compileReleaseJavaWithJavac', task ':camera_android_camerax:prepareReleaseArtProfile', task ':cloud_firestore:prepareReleaseArtProfile', task ':firebase_auth:prepareReleaseArtProfile', task ':firebase_core:prepareReleaseArtProfile', task ':firebase_storage:prepareReleaseArtProfile', task ':flutter_contacts:prepareReleaseArtProfile', task ':flutter_plugin_android_lifecycle:prepareReleaseArtProfile', task ':google_mlkit_commons:prepareReleaseArtProfile', task ':google_mlkit_text_recognition:prepareReleaseArtProfile', task ':image_picker_android:prepareReleaseArtProfile', task ':path_provider_android:prepareReleaseArtProfile', task ':permission_handler_android:prepareReleaseArtProfile', task ':share_plus:prepareReleaseArtProfile', task ':shared_preferences_android:prepareReleaseArtProfile', task ':app:mergeReleaseArtProfile', task ':camera_android_camerax:bundleLibRuntimeToJarRelease', task ':cloud_firestore:bundleLibRuntimeToJarRelease', task ':firebase_auth:bundleLibRuntimeToJarRelease', task ':firebase_core:bundleLibRuntimeToJarRelease', task ':firebase_storage:bundleLibRuntimeToJarRelease', task ':flutter_contacts:bundleLibRuntimeToJarRelease', task ':flutter_plugin_android_lifecycle:bundleLibRuntimeToJarRelease', task ':google_mlkit_commons:bundleLibRuntimeToJarRelease', task ':google_mlkit_text_recognition:bundleLibRuntimeToJarRelease', task ':image_picker_android:bundleLibRuntimeToJarRelease', task ':path_provider_android:bundleLibRuntimeToJarRelease', task ':permission_handler_android:bundleLibRuntimeToJarRelease', task ':share_plus:bundleLibRuntimeToJarRelease', task ':shared_preferences_android:bundleLibRuntimeToJarRelease', task ':app:expandReleaseArtProfileWildcards', task ':app:extractProguardFiles', task ':app:mergeReleaseGeneratedProguardFiles', task ':app:processReleaseJavaRes', task ':camera_android_camerax:processReleaseJavaRes', task ':cloud_firestore:processReleaseJavaRes', task ':firebase_auth:processReleaseJavaRes', task ':firebase_core:processReleaseJavaRes', task ':firebase_storage:processReleaseJavaRes', task ':flutter_contacts:processReleaseJavaRes', task ':flutter_plugin_android_lifecycle:processReleaseJavaRes', task ':google_mlkit_commons:processReleaseJavaRes', task ':google_mlkit_text_recognition:processReleaseJavaRes', task ':image_picker_android:processReleaseJavaRes', task ':path_provider_android:processReleaseJavaRes', task ':permission_handler_android:processReleaseJavaRes', task ':share_plus:processReleaseJavaRes', task ':shared_preferences_android:processReleaseJavaRes', task ':app:mergeReleaseJavaResource', task ':app:mergeReleaseStartupProfile', task ':app:minifyReleaseWithR8', task ':app:compileReleaseArtProfile', task ':app:compressReleaseAssets', task ':app:extractReleaseVersionControlInfo', task ':camera_android_camerax:createFullJarRelease', task ':camera_android_camerax:extractProguardFiles', task ':camera_android_camerax:generateReleaseLintModel', task ':camera_android_camerax:prepareLintJarForPublish', task ':cloud_firestore:createFullJarRelease', task ':cloud_firestore:extractProguardFiles', task ':firebase_core:createFullJarRelease', task ':firebase_core:extractProguardFiles', task ':firebase_core:generateReleaseLintModel', task ':firebase_core:prepareLintJarForPublish', task ':cloud_firestore:generateReleaseLintModel', task ':cloud_firestore:prepareLintJarForPublish', task ':firebase_auth:createFullJarRelease', task ':firebase_auth:extractProguardFiles', task ':firebase_auth:generateReleaseLintModel', task ':firebase_auth:prepareLintJarForPublish', task ':firebase_storage:createFullJarRelease', task ':firebase_storage:extractProguardFiles', task ':firebase_storage:generateReleaseLintModel', task ':firebase_storage:prepareLintJarForPublish', task ':flutter_contacts:createFullJarRelease', task ':flutter_contacts:extractProguardFiles', task ':flutter_contacts:generateReleaseLintModel', task ':flutter_contacts:prepareLintJarForPublish', task ':flutter_plugin_android_lifecycle:createFullJarRelease', task ':flutter_plugin_android_lifecycle:extractProguardFiles', task ':flutter_plugin_android_lifecycle:generateReleaseLintModel', task ':flutter_plugin_android_lifecycle:prepareLintJarForPublish', task ':google_mlkit_commons:createFullJarRelease', task ':google_mlkit_commons:extractProguardFiles', task ':google_mlkit_commons:generateReleaseLintModel', task ':google_mlkit_commons:prepareLintJarForPublish', task ':google_mlkit_text_recognition:createFullJarRelease', task ':google_mlkit_text_recognition:extractProguardFiles', task ':google_mlkit_text_recognition:generateReleaseLintModel', task ':google_mlkit_text_recognition:prepareLintJarForPublish', task ':image_picker_android:createFullJarRelease', task ':image_picker_android:extractProguardFiles', task ':image_picker_android:generateReleaseLintModel', task ':image_picker_android:prepareLintJarForPublish', task ':path_provider_android:createFullJarRelease', task ':path_provider_android:extractProguardFiles', task ':path_provider_android:generateReleaseLintModel', task ':path_provider_android:prepareLintJarForPublish', task ':permission_handler_android:createFullJarRelease', task ':permission_handler_android:extractProguardFiles', task ':permission_handler_android:generateReleaseLintModel', task ':permission_handler_android:prepareLintJarForPublish', task ':share_plus:createFullJarRelease', task ':share_plus:extractProguardFiles', task ':share_plus:generateReleaseLintModel', task ':share_plus:prepareLintJarForPublish', task ':shared_preferences_android:createFullJarRelease', task ':shared_preferences_android:extractProguardFiles', task ':shared_preferences_android:generateReleaseLintModel', task ':shared_preferences_android:prepareLintJarForPublish', task ':app:generateReleaseLintVitalReportModel', task ':camera_android_camerax:stripReleaseDebugSymbols', task ':camera_android_camerax:copyReleaseJniLibsProjectAndLocalJars', task ':camera_android_camerax:extractDeepLinksForAarRelease', task ':camera_android_camerax:extractReleaseAnnotations', task ':camera_android_camerax:mergeReleaseConsumerProguardFiles', task ':camera_android_camerax:mergeReleaseJavaResource', task ':camera_android_camerax:syncReleaseLibJars', task ':camera_android_camerax:bundleReleaseLocalLintAar', task ':cloud_firestore:stripReleaseDebugSymbols', task ':cloud_firestore:copyReleaseJniLibsProjectAndLocalJars', task ':cloud_firestore:extractDeepLinksForAarRelease', task ':cloud_firestore:extractReleaseAnnotations', task ':cloud_firestore:mergeReleaseConsumerProguardFiles', task ':cloud_firestore:mergeReleaseJavaResource', task ':cloud_firestore:syncReleaseLibJars', task ':cloud_firestore:bundleReleaseLocalLintAar', task ':firebase_auth:stripReleaseDebugSymbols', task ':firebase_auth:copyReleaseJniLibsProjectAndLocalJars', task ':firebase_auth:extractDeepLinksForAarRelease', task ':firebase_auth:extractReleaseAnnotations', task ':firebase_auth:mergeReleaseConsumerProguardFiles', task ':firebase_auth:mergeReleaseJavaResource', task ':firebase_auth:syncReleaseLibJars', task ':firebase_auth:bundleReleaseLocalLintAar', task ':firebase_storage:stripReleaseDebugSymbols', task ':firebase_storage:copyReleaseJniLibsProjectAndLocalJars', task ':firebase_storage:extractDeepLinksForAarRelease', task ':firebase_storage:extractReleaseAnnotations', task ':firebase_storage:mergeReleaseConsumerProguardFiles', task ':firebase_storage:mergeReleaseJavaResource', task ':firebase_storage:syncReleaseLibJars', task ':firebase_storage:bundleReleaseLocalLintAar', task ':firebase_core:stripReleaseDebugSymbols', task ':firebase_core:copyReleaseJniLibsProjectAndLocalJars', task ':firebase_core:extractDeepLinksForAarRelease', task ':firebase_core:extractReleaseAnnotations', task ':firebase_core:mergeReleaseConsumerProguardFiles', task ':firebase_core:mergeReleaseJavaResource', task ':firebase_core:syncReleaseLibJars', task ':firebase_core:bundleReleaseLocalLintAar', task ':flutter_contacts:stripReleaseDebugSymbols', task ':flutter_contacts:copyReleaseJniLibsProjectAndLocalJars', task ':flutter_contacts:extractDeepLinksForAarRelease', task ':flutter_contacts:extractReleaseAnnotations', task ':flutter_contacts:mergeReleaseConsumerProguardFiles', task ':flutter_contacts:mergeReleaseJavaResource', task ':flutter_contacts:syncReleaseLibJars', task ':flutter_contacts:bundleReleaseLocalLintAar', task ':image_picker_android:stripReleaseDebugSymbols', task ':image_picker_android:copyReleaseJniLibsProjectAndLocalJars', task ':image_picker_android:extractDeepLinksForAarRelease', task ':image_picker_android:extractReleaseAnnotations', task ':image_picker_android:mergeReleaseConsumerProguardFiles', task ':image_picker_android:mergeReleaseJavaResource', task ':image_picker_android:syncReleaseLibJars', task ':image_picker_android:bundleReleaseLocalLintAar', task ':flutter_plugin_android_lifecycle:stripReleaseDebugSymbols', task ':flutter_plugin_android_lifecycle:copyReleaseJniLibsProjectAndLocalJars', task ':flutter_plugin_android_lifecycle:extractDeepLinksForAarRelease', task ':flutter_plugin_android_lifecycle:extractReleaseAnnotations', task ':flutter_plugin_android_lifecycle:mergeReleaseConsumerProguardFiles', task ':flutter_plugin_android_lifecycle:mergeReleaseJavaResource', task ':flutter_plugin_android_lifecycle:syncReleaseLibJars', task ':flutter_plugin_android_lifecycle:bundleReleaseLocalLintAar', task ':google_mlkit_text_recognition:stripReleaseDebugSymbols', task ':google_mlkit_text_recognition:copyReleaseJniLibsProjectAndLocalJars', task ':google_mlkit_text_recognition:extractDeepLinksForAarRelease', task ':google_mlkit_text_recognition:extractReleaseAnnotations', task ':google_mlkit_text_recognition:mergeReleaseConsumerProguardFiles', task ':google_mlkit_text_recognition:mergeReleaseJavaResource', task ':google_mlkit_text_recognition:syncReleaseLibJars', task ':google_mlkit_text_recognition:bundleReleaseLocalLintAar', task ':google_mlkit_commons:stripReleaseDebugSymbols', task ':google_mlkit_commons:copyReleaseJniLibsProjectAndLocalJars', task ':google_mlkit_commons:extractDeepLinksForAarRelease', task ':google_mlkit_commons:extractReleaseAnnotations', task ':google_mlkit_commons:mergeReleaseConsumerProguardFiles', task ':google_mlkit_commons:mergeReleaseJavaResource', task ':google_mlkit_commons:syncReleaseLibJars', task ':google_mlkit_commons:bundleReleaseLocalLintAar', task ':path_provider_android:stripReleaseDebugSymbols', task ':path_provider_android:copyReleaseJniLibsProjectAndLocalJars', task ':path_provider_android:extractDeepLinksForAarRelease', task ':path_provider_android:extractReleaseAnnotations', task ':path_provider_android:mergeReleaseConsumerProguardFiles', task ':path_provider_android:mergeReleaseJavaResource', task ':path_provider_android:syncReleaseLibJars', task ':path_provider_android:bundleReleaseLocalLintAar', task ':permission_handler_android:stripReleaseDebugSymbols', task ':permission_handler_android:copyReleaseJniLibsProjectAndLocalJars', task ':permission_handler_android:extractDeepLinksForAarRelease', task ':permission_handler_android:extractReleaseAnnotations', task ':permission_handler_android:mergeReleaseConsumerProguardFiles', task ':permission_handler_android:mergeReleaseJavaResource', task ':permission_handler_android:syncReleaseLibJars', task ':permission_handler_android:bundleReleaseLocalLintAar', task ':share_plus:stripReleaseDebugSymbols', task ':share_plus:copyReleaseJniLibsProjectAndLocalJars', task ':share_plus:extractDeepLinksForAarRelease', task ':share_plus:extractReleaseAnnotations', task ':share_plus:mergeReleaseConsumerProguardFiles', task ':share_plus:mergeReleaseJavaResource', task ':share_plus:syncReleaseLibJars', task ':share_plus:bundleReleaseLocalLintAar', task ':shared_preferences_android:stripReleaseDebugSymbols', task ':shared_preferences_android:copyReleaseJniLibsProjectAndLocalJars', task ':shared_preferences_android:extractDeepLinksForAarRelease', task ':shared_preferences_android:extractReleaseAnnotations', task ':shared_preferences_android:mergeReleaseConsumerProguardFiles', task ':shared_preferences_android:mergeReleaseJavaResource', task ':shared_preferences_android:syncReleaseLibJars', task ':shared_preferences_android:bundleReleaseLocalLintAar', task ':camera_android_camerax:lintVitalAnalyzeRelease', task ':camera_android_camerax:writeReleaseLintModelMetadata', task ':firebase_core:writeReleaseLintModelMetadata', task ':cloud_firestore:lintVitalAnalyzeRelease', task ':cloud_firestore:writeReleaseLintModelMetadata', task ':firebase_auth:lintVitalAnalyzeRelease', task ':firebase_auth:writeReleaseLintModelMetadata', task ':firebase_core:lintVitalAnalyzeRelease', task ':firebase_storage:lintVitalAnalyzeRelease', task ':firebase_storage:writeReleaseLintModelMetadata', task ':flutter_contacts:lintVitalAnalyzeRelease', task ':flutter_contacts:writeReleaseLintModelMetadata', task ':flutter_plugin_android_lifecycle:lintVitalAnalyzeRelease', task ':flutter_plugin_android_lifecycle:writeReleaseLintModelMetadata', task ':google_mlkit_commons:lintVitalAnalyzeRelease', task ':google_mlkit_commons:writeReleaseLintModelMetadata', task ':google_mlkit_text_recognition:lintVitalAnalyzeRelease', task ':google_mlkit_text_recognition:writeReleaseLintModelMetadata', task ':image_picker_android:lintVitalAnalyzeRelease', task ':image_picker_android:writeReleaseLintModelMetadata', task ':path_provider_android:lintVitalAnalyzeRelease', task ':path_provider_android:writeReleaseLintModelMetadata', task ':permission_handler_android:lintVitalAnalyzeRelease', task ':permission_handler_android:writeReleaseLintModelMetadata', task ':share_plus:lintVitalAnalyzeRelease', task ':share_plus:writeReleaseLintModelMetadata', task ':shared_preferences_android:lintVitalAnalyzeRelease', task ':shared_preferences_android:writeReleaseLintModelMetadata', task ':app:lintVitalAnalyzeRelease', task ':camera_android_camerax:generateReleaseLintVitalModel', task ':cloud_firestore:generateReleaseLintVitalModel', task ':firebase_auth:generateReleaseLintVitalModel', task ':firebase_core:generateReleaseLintVitalModel', task ':firebase_storage:generateReleaseLintVitalModel', task ':flutter_contacts:generateReleaseLintVitalModel', task ':flutter_plugin_android_lifecycle:generateReleaseLintVitalModel', task ':google_mlkit_commons:generateReleaseLintVitalModel', task ':google_mlkit_text_recognition:generateReleaseLintVitalModel', task ':image_picker_android:generateReleaseLintVitalModel', task ':path_provider_android:generateReleaseLintVitalModel', task ':permission_handler_android:generateReleaseLintVitalModel', task ':share_plus:generateReleaseLintVitalModel', task ':shared_preferences_android:generateReleaseLintVitalModel', task ':app:lintVitalReportRelease', task ':app:lintVitalRelease', task ':app:convertShrunkResourcesToBinaryRelease', task ':app:optimizeReleaseResources', task ':app:collectReleaseDependencies', task ':app:sdkReleaseDependencyData', task ':app:validateSigningRelease', task ':app:writeReleaseAppMetadata', task ':app:writeReleaseSigningConfigVersions', task ':app:packageRelease', task ':app:createReleaseApkListingFileRedirect', task ':app:assembleRelease', task ':camera_android_camerax:bundleReleaseAar', task ':camera_android_camerax:mapReleaseSourceSetPaths', task ':camera_android_camerax:mergeReleaseResources', task ':camera_android_camerax:verifyReleaseResources', task ':camera_android_camerax:assembleRelease', task ':cloud_firestore:bundleReleaseAar', task ':cloud_firestore:mapReleaseSourceSetPaths', task ':cloud_firestore:mergeReleaseResources', task ':firebase_core:compileReleaseLibraryResources', task ':cloud_firestore:verifyReleaseResources', task ':cloud_firestore:assembleRelease', task ':firebase_auth:bundleReleaseAar', task ':firebase_auth:mapReleaseSourceSetPaths', task ':firebase_auth:mergeReleaseResources', task ':firebase_auth:verifyReleaseResources', task ':firebase_auth:assembleRelease', task ':firebase_core:bundleReleaseAar', task ':firebase_core:mapReleaseSourceSetPaths', task ':firebase_core:mergeReleaseResources', task ':firebase_core:verifyReleaseResources', task ':firebase_core:assembleRelease', task ':firebase_storage:bundleReleaseAar', task ':firebase_storage:mapReleaseSourceSetPaths', task ':firebase_storage:mergeReleaseResources', task ':firebase_storage:verifyReleaseResources', task ':firebase_storage:assembleRelease', task ':flutter_contacts:bundleReleaseAar', task ':flutter_contacts:mapReleaseSourceSetPaths', task ':flutter_contacts:mergeReleaseResources', task ':flutter_contacts:verifyReleaseResources', task ':flutter_contacts:assembleRelease', task ':flutter_plugin_android_lifecycle:bundleReleaseAar', task ':flutter_plugin_android_lifecycle:mapReleaseSourceSetPaths', task ':flutter_plugin_android_lifecycle:mergeReleaseResources', task ':flutter_plugin_android_lifecycle:verifyReleaseResources', task ':flutter_plugin_android_lifecycle:assembleRelease', task ':google_mlkit_commons:bundleReleaseAar', task ':google_mlkit_commons:mapReleaseSourceSetPaths', task ':google_mlkit_commons:mergeReleaseResources', task ':google_mlkit_commons:verifyReleaseResources', task ':google_mlkit_commons:assembleRelease', task ':google_mlkit_text_recognition:bundleReleaseAar', task ':google_mlkit_commons:compileReleaseLibraryResources', task ':google_mlkit_text_recognition:mapReleaseSourceSetPaths', task ':google_mlkit_text_recognition:mergeReleaseResources', task ':google_mlkit_text_recognition:verifyReleaseResources', task ':google_mlkit_text_recognition:assembleRelease', task ':image_picker_android:bundleReleaseAar', task ':flutter_plugin_android_lifecycle:compileReleaseLibraryResources', task ':image_picker_android:mapReleaseSourceSetPaths', task ':image_picker_android:mergeReleaseResources', task ':image_picker_android:verifyReleaseResources', task ':image_picker_android:assembleRelease', task ':path_provider_android:bundleReleaseAar', task ':path_provider_android:mapReleaseSourceSetPaths', task ':path_provider_android:mergeReleaseResources', task ':path_provider_android:verifyReleaseResources', task ':path_provider_android:assembleRelease', task ':permission_handler_android:bundleReleaseAar', task ':permission_handler_android:mapReleaseSourceSetPaths', task ':permission_handler_android:mergeReleaseResources', task ':permission_handler_android:verifyReleaseResources', task ':permission_handler_android:assembleRelease', task ':share_plus:bundleReleaseAar', task ':share_plus:mapReleaseSourceSetPaths', task ':share_plus:mergeReleaseResources', task ':share_plus:verifyReleaseResources', task ':share_plus:assembleRelease', task ':shared_preferences_android:bundleReleaseAar', task ':shared_preferences_android:mapReleaseSourceSetPaths', task ':shared_preferences_android:mergeReleaseResources', task ':shared_preferences_android:verifyReleaseResources', task ':shared_preferences_android:assembleRelease']
+[        ] Tasks that were excluded: []
+[        ] work action Parameters of FilterShrinkerRulesTransform (Thread[#423,included builds,5,main]) started.
+[        ] work action Parameters of ExtractAarTransform (Thread[#423,included builds,5,main]) started.
+[        ] work action Parameters of ExtractAarTransform (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] work action Parameters of ExtractAarTransform (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] work action Parameters of ExtractAarTransform (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] work action Parameters of ExtractAarTransform (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] work action Parameters of ExtractAarTransform (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :app:ReleaseMinSdkCheck (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] :app:ReleaseMinSdkCheck (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] > Task :app:ReleaseMinSdkCheck
+[        ] Custom actions are attached to task ':app:ReleaseMinSdkCheck'.
+[        ] Caching disabled for task ':app:ReleaseMinSdkCheck' because:
+[        ]   Gradle would require more information to cache this task
+[        ] Task ':app:ReleaseMinSdkCheck' is not up-to-date because:
+[        ]   Task has not declared any outputs despite executing actions.
+[        ] Resolve mutations for :app:compileFlutterBuildRelease (Thread[#425,Execution worker Thread 2,5,main]) started.
+[        ] :app:compileFlutterBuildRelease (Thread[#425,Execution worker Thread 2,5,main]) started.
+[+1987 ms] > Task :app:compileFlutterBuildRelease
+[        ] Caching disabled for task ':app:compileFlutterBuildRelease' because:
+[        ]   Caching has not been enabled for the task
+[        ] Task ':app:compileFlutterBuildRelease' is not up-to-date because:
+[        ]   Value of input property 'verbose' has changed for task ':app:compileFlutterBuildRelease'
+[        ] Starting process 'command '/home/user/flutter/bin/flutter''. Working directory: /home/user/myapp Command: /home/user/flutter/bin/flutter --verbose assemble --no-version-check --depfile /home/user/myapp/build/app/intermediates/flutter/release/flutter_build.d --output /home/user/myapp/build/app/intermediates/flutter/release -dTargetFile=lib/main.dart -dTargetPlatform=android -dBuildMode=release -dTrackWidgetCreation=true -dTreeShakeIcons=true --DartDefines=RkxVVFRFUl9WRVJTSU9OPTMuMzUuMg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049MDVkYjk2ODkwOA==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049YThiZmRmYzM5NA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My45LjA= -dFlavor= -dAndroidArchs=android-arm android-arm64 android-x64 -dMinSdkVersion=24 android_aot_bundle_release_android-arm android_aot_bundle_release_android-arm64 android_aot_bundle_release_android-x64
+[        ] Successfully started process 'command '/home/user/flutter/bin/flutter''
+[        ] [  +35 ms] executing: uname -m
+[        ] [   +3 ms] Exit code 0 from: uname -m
+[        ] [        ] x86_64
+[        ] [   +6 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[        ] [   +7 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] [   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [  +37 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] [   +1 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[        ] [  +40 ms] Initializing file store
+[        ] [  +35 ms] Skipping target: gen_localizations
+[        ] [   +2 ms] gen_dart_plugin_registrant: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /home/user/myapp/.dart_tool/package_config.json}
+[        ] [   +2 ms] dart_build: Starting due to {}
+[        ] [ +116 ms] No packages with native assets. Skipping native assets compilation.
+[        ] [   +1 ms] dart_build: Complete
+[        ] [   +2 ms] install_code_assets: Starting due to {}
+[        ] [   +2 ms] Writing native assets json to file:///home/user/myapp/.dart_tool/flutter_build/58a59067e8b21f2061ee7cbeeacc921c/native_assets.json.
+[        ] [   +3 ms] Writing /home/user/myapp/.dart_tool/flutter_build/58a59067e8b21f2061ee7cbeeacc921c/native_assets.json done.
+[        ] [        ] install_code_assets: Complete
+[        ] [  +34 ms] Found plugin shared_preferences at /home/user/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/
+[        ] [   +3 ms] Found plugin shared_preferences_windows at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1/
+[        ] [   +2 ms] Found plugin path_provider_windows at /home/user/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+[        ] [   +2 ms] Found plugin shared_preferences_web at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.3/
+[        ] [   +1 ms] Found plugin shared_preferences_linux at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1/
+[        ] [   +1 ms] Found plugin path_provider_linux at /home/user/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+[        ] [   +1 ms] Found plugin shared_preferences_foundation at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.5/
+[        ] [   +1 ms] Found plugin shared_preferences_android at /home/user/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.15/
+[        ] [   +1 ms] Found plugin share_plus at /home/user/.pub-cache/hosted/pub.dev/share_plus-12.0.1/
+[        ] [   +1 ms] Found plugin url_launcher_windows at /home/user/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.5/
+[        ] [   +1 ms] Found plugin url_launcher_web at /home/user/.pub-cache/hosted/pub.dev/url_launcher_web-2.4.1/
+[        ] [        ] Found plugin url_launcher_linux at /home/user/.pub-cache/hosted/pub.dev/url_launcher_linux-3.2.2/
+[        ] [   +1 ms] Found plugin path_provider at /home/user/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+[        ] [        ] Found plugin path_provider_foundation at /home/user/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.3/
+[        ] [        ] Found plugin path_provider_android at /home/user/.pub-cache/hosted/pub.dev/path_provider_android-2.2.20/
+[        ] [   +1 ms] Found plugin permission_handler at /home/user/.pub-cache/hosted/pub.dev/permission_handler-12.0.1/
+[        ] [        ] Found plugin permission_handler_windows at /home/user/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1/
+[        ] [   +1 ms] Found plugin permission_handler_html at /home/user/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.3+5/
+[        ] [        ] Found plugin permission_handler_apple at /home/user/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.7/
+[        ] [        ] Found plugin permission_handler_android at /home/user/.pub-cache/hosted/pub.dev/permission_handler_android-13.0.1/
+[        ] [   +4 ms] Found plugin image_picker at /home/user/.pub-cache/hosted/pub.dev/image_picker-1.2.0/
+[        ] [   +1 ms] Found plugin image_picker_windows at /home/user/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.2/
+[        ] [   +2 ms] Found plugin file_selector_windows at /home/user/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+4/
+[        ] [   +1 ms] Found plugin image_picker_macos at /home/user/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.2+1/
+[        ] [   +1 ms] Found plugin file_selector_macos at /home/user/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+5/
+[        ] [   +1 ms] Found plugin image_picker_linux at /home/user/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.2/
+[        ] [   +1 ms] Found plugin file_selector_linux at /home/user/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2/
+[        ] [   +1 ms] Found plugin image_picker_ios at /home/user/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.13+1/
+[        ] [   +1 ms] Found plugin image_picker_for_web at /home/user/.pub-cache/hosted/pub.dev/image_picker_for_web-3.1.0/
+[        ] [   +1 ms] Found plugin image_picker_android at /home/user/.pub-cache/hosted/pub.dev/image_picker_android-0.8.13+5/
+[        ] [   +1 ms] Found plugin flutter_plugin_android_lifecycle at /home/user/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.32/
+[        ] [   +1 ms] Found plugin google_mlkit_text_recognition at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.15.0/
+[        ] [   +1 ms] Found plugin google_mlkit_commons at /home/user/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.11.0/
+[        ] [  +12 ms] Found plugin flutter_contacts at /home/user/.pub-cache/hosted/pub.dev/flutter_contacts-1.1.9+2/
+[        ] [   +7 ms] Found plugin firebase_storage at /home/user/.pub-cache/hosted/pub.dev/firebase_storage-13.0.3/
+[        ] [   +1 ms] Found plugin firebase_storage_web at /home/user/.pub-cache/hosted/pub.dev/firebase_storage_web-3.10.21/
+[        ] [   +1 ms] Found plugin firebase_core at /home/user/.pub-cache/hosted/pub.dev/firebase_core-4.2.0/
+[        ] [   +1 ms] Found plugin firebase_core_web at /home/user/.pub-cache/hosted/pub.dev/firebase_core_web-3.2.0/
+[        ] [   +2 ms] Found plugin firebase_auth at /home/user/.pub-cache/hosted/pub.dev/firebase_auth-6.1.1/
+[        ] [        ] Found plugin firebase_auth_web at /home/user/.pub-cache/hosted/pub.dev/firebase_auth_web-6.0.4/
+[        ] [   +3 ms] Found plugin cloud_firestore at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore-6.0.3/
+[        ] [        ] Found plugin cloud_firestore_web at /home/user/.pub-cache/hosted/pub.dev/cloud_firestore_web-5.0.3/
+[        ] [   +1 ms] Found plugin camera at /home/user/.pub-cache/hosted/pub.dev/camera-0.11.3/
+[        ] [        ] Found plugin camera_web at /home/user/.pub-cache/hosted/pub.dev/camera_web-0.3.5+1/
+[        ] [   +1 ms] Found plugin camera_avfoundation at /home/user/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.22+6/
+[        ] [        ] Found plugin camera_android_camerax at /home/user/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.24+2/
+[        ] [  +16 ms] gen_dart_plugin_registrant: Complete
+[        ] [   +1 ms] kernel_snapshot_program: Starting due to {}
+[        ] [  +11 ms] /home/user/flutter/bin/cache/dart-sdk/bin/dartaotruntime /home/user/flutter/bin/cache/dart-sdk/bin/snapshots/frontend_server_aot.dart.snapshot --sdk-root /home/user/flutter/bin/cache/artifacts/engine/common/flutter_patched_sdk_product/ --target=flutter --no-print-incremental-dependencies -DFLUTTER_VERSION=3.35.2 -DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_URL=https://github.com/flutter/flutter.git -DFLUTTER_FRAMEWORK_REVISION=05db968908 -DFLUTTER_ENGINE_REVISION=a8bfdfc394 -DFLUTTER_DART_VERSION=3.9.0 -DFLUTTER_APP_FLAVOR= -Ddart.vm.profile=false -Ddart.vm.product=true --delete-tostring-package-uri=dart:ui --delete-tostring-package-uri=package:flutter --aot --tfa --target-os android --packages /home/user/myapp/.dart_tool/package_config.json --output-dill /home/user/myapp/.dart_tool/flutter_build/58a59067e8b21f2061ee7cbeeacc921c/app.dill --depfile /home/user/myapp/.dart_tool/flutter_build/58a59067e8b21f2061ee7cbeeacc921c/kernel_snapshot_program.d --source file:///home/user/myapp/.dart_tool/flutter_build/dart_plugin_registrant.dart --source package:flutter/src/dart_plugin_registrant.dart -Dflutter.dart_plugin_registrant=file:///home/user/myapp/.dart_tool/flutter_build/dart_plugin_registrant.dart --verbosity=error package:own/main.dart
